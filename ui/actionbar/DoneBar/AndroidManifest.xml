@@ -26,7 +26,7 @@
         android:theme="@style/Theme.Sample"
         android:allowBackup="true">
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".SampleDashboardActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
