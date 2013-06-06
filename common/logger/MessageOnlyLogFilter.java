@@ -29,9 +29,11 @@ public class MessageOnlyLogFilter implements LogNode {
      *
      * @param next The next LogNode in the pipeline.
      */
-    @Override
     public MessageOnlyLogFilter(LogNode next) {
         mNext = next;
+    }
+
+    public MessageOnlyLogFilter() {
     }
 
     @Override
@@ -41,9 +43,8 @@ public class MessageOnlyLogFilter implements LogNode {
         }
     }
 
-
     /**
-     * Returns the next LogNode in the linked list.
+     * Returns the next LogNode in the chain.
      */
     public LogNode getNext() {
         return mNext;
