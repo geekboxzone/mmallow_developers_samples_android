@@ -37,3 +37,11 @@ project.properties
 
 #gitignore file
 .gitignore
+
+##Gradle-based build
+.gradle
+build/
+gradle/
+gradlew
+gradlew.bat
+settings.gradle
