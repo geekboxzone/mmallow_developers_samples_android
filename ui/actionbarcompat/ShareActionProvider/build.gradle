@@ -1,0 +1,16 @@
+apply plugin: 'android'
+
+dependencies {
+    compile "com.android.support:support-v4:18.0.+"
+    compile "com.android.support:appcompat-v7:18.0.+"
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 16
+    }
+}
