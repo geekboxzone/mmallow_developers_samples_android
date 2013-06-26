@@ -1,0 +1,34 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.4.2'
+    }
+}
+
+apply plugin: 'android'
+
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 4
+        targetSdkVersion 17
+    }
+}
+
+task preflight (dependsOn: parent.preflight) {}
+
+// Inject a preflight task into each variant so we have a place to hook tasks
+// that need to run before any of the android build tasks.
+android.applicationVariants.each { variant ->
+    tasks.getByPath("prepare${variant.name.capitalize()}Dependencies").dependsOn preflight
+}
+
+
+

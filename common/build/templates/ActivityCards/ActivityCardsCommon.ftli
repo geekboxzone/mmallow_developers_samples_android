@@ -1,0 +1,1 @@
+<#macro make_activity_res activity type>${(activity.class!"activity_class")?lower_case}_${type}</#macro>

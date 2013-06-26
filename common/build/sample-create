@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+CALLED_FROM=$( pwd -P )
+SCRIPTNAME=$(basename "$0")
+SCRIPTPATH=$( cd "$(dirname "$0")" ; pwd -P )
+GRADLE=$SCRIPTPATH/gradlew
+
+SAMPLE_PATH=""
+
+if  [ -n "$1" ]; then
+    SAMPLE_PATH=$CALLED_FROM/$1
+fi
+
+SAMPLES_COMMON=$( cd "$SCRIPTPATH/.." ; pwd -P )
+
+SAMPLES_COMMON=$(perl -e "use File::Spec; print File::Spec->abs2rel(@ARGV)" $SAMPLES_COMMON $SAMPLE_PATH)
+
+$GRADLE -b $SCRIPTPATH/build.gradle --info create -Pout=$SAMPLE_PATH -PcalledFrom=$CALLED_FROM -PpathToSamplesCommon=$SAMPLES_COMMON

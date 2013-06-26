@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.common;
+package com.example.android.common.util;
 
 /**
  * Helper class for creating pools of objects. Creating new objects is an
