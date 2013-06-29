@@ -17,12 +17,14 @@
 package com.example.android.network.sync.basicsyncadapter;
 
 import android.accounts.Account;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SyncStatusObserver;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
@@ -38,7 +40,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.android.network.sync.basicsyncadapter.accounts.GenericAccountService;
+import com.example.android.common.accounts.GenericAccountService;
 import com.example.android.network.sync.basicsyncadapter.provider.FeedContract;
 
 /**
@@ -295,8 +297,9 @@ public class EntryListFragment extends ListFragment
      *
      * @param refreshing True if an active sync is occuring, false otherwise
      */
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void setRefreshActionButtonState(boolean refreshing) {
-        if (mOptionsMenu == null) {
+        if (mOptionsMenu == null || Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
             return;
         }
 
