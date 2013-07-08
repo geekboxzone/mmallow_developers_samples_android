@@ -16,15 +16,11 @@
 package com.example.android.common.logger;
 
 import android.content.Context;
-import android.text.method.ScrollingMovementMethod;
 import android.util.*;
 import android.widget.TextView;
 
-/**
- * Created by alexlucas on 6/4/13.
- */
-
-
+/** Simple TextView which is used to output log data received through the LogNode interface.
+*/
 public class LogView extends TextView implements LogNode {
 
     public LogView(Context context) {
@@ -75,7 +71,7 @@ public class LogView extends TextView implements LogNode {
                 break;
         }
 
-        // Handily, the Log class has a facility for converting a stack trace into a useable string.
+        // Handily, the Log class has a facility for converting a stack trace into a usable string.
         String exceptionStr = null;
         if (tr != null) {
             exceptionStr = android.util.Log.getStackTraceString(tr);
@@ -85,6 +81,7 @@ public class LogView extends TextView implements LogNode {
         // into one usable line of text.
         StringBuilder outputBuilder = new StringBuilder();
 
+        String delimiter = "\t";
         appendIfNotNull(outputBuilder, priorityStr, delimiter);
         appendIfNotNull(outputBuilder, tag, delimiter);
         appendIfNotNull(outputBuilder, msg, delimiter);
@@ -106,12 +103,12 @@ public class LogView extends TextView implements LogNode {
         mNext = node;
     }
 
-    /** Takes a string and adds to it, with a seperator, if the bit to be added isn't null. Since
+    /** Takes a string and adds to it, with a separator, if the bit to be added isn't null. Since
      * the logger takes so many arguments that might be null, this method helps cut out some of the
      * agonizing tedium of writing the same 3 lines over and over.
-     * @param source Stringbuilder containing the text to append to.
-     * @param addStrStr The String to append
-     * @param delimiter The String to seperate the source and appendee strings. A tab or comma,
+     * @param source StringBuilder containing the text to append to.
+     * @param addStr The String to append
+     * @param delimiter The String to separate the source and appended strings. A tab or comma,
      *                  for instance.
      * @return The fully concatenated String as a StringBuilder
      */
