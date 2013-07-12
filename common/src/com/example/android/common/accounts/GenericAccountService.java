@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.network.sync.basicsyncadapter.accounts;
+package com.example.android.common.accounts;
 
 import android.accounts.AbstractAccountAuthenticator;
 import android.accounts.Account;

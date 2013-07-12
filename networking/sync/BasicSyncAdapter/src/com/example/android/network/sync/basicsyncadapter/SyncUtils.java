@@ -23,7 +23,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.example.android.network.sync.basicsyncadapter.accounts.GenericAccountService;
+import com.example.android.common.accounts.GenericAccountService;
 import com.example.android.network.sync.basicsyncadapter.provider.FeedContract;
 
 /**
