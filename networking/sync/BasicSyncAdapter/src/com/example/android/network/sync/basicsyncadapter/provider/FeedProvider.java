@@ -25,7 +25,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 
-import com.example.android.network.sync.basicsyncadapter.util.SelectionBuilder;
+import com.example.android.common.db.SelectionBuilder;
 
 public class FeedProvider extends ContentProvider {
     FeedDatabase mDatabaseHelper;
