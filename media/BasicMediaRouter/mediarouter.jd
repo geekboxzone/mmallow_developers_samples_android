@@ -1,0 +1,26 @@
+page.title=MediaRouter Sample
+@jd:body
+<p>
+This sample demonstrates the use of the MediaRouter API to show content on a
+secondary display using a {@link Presentation}.
+</p>
+<p>
+The activity uses the 
+<a href="http://developer.android.com/reference/android/media/MediaRouter.html">MediaRouter</a> API
+ to automatically detect when a
+ presentation display is available and to allow the user to control the media routes using a menu
+ item provided by the 
+ <a href="http://developer.android.com/reference/android/app/MediaRouteActionProvider.html">
+ MediaRouteActionProvider</a>.
+When a presentation display is available a
+ <a href="http://developer.android.com/reference/android/app/Presentation.html">Presentation</a>
+ is shown on the preferred display. A button toggles the background color of the secondary screen
+ to show the interaction between the primary and secondary screens.
+</p>
+<p>
+This sample requires an HDMI or Wifi display. Alternatively, the
+ "Simulate secondary displays" feature in Development Settings can be enabled
+ to simulate secondary displays.
+</p>
+
+
