@@ -16,24 +16,9 @@
 
 <resources>
 
-    <style name="Widget.SampleContentContainer">
-        <item name="android:paddingTop">@dimen/margin_medium</item>
-        <item name="android:paddingBottom">@dimen/margin_medium</item>
-        <item name="android:paddingLeft">@dimen/margin_huge</item>
-        <item name="android:paddingRight">@dimen/margin_huge</item>
-    </style>
-
     <style name="Widget.SampleMessage">
         <item name="android:textAppearance">?android:textAppearanceLarge</item>
         <item name="android:lineSpacingMultiplier">1.2</item>
-    </style>
-
-    <style name="Widget.SampleButton" parent="android:Widget.Holo.Light.Button">
-        <item name="android:textAppearance">?android:textAppearanceLarge</item>
-        <item name="android:paddingTop">@dimen/margin_medium</item>
-        <item name="android:paddingBottom">@dimen/margin_medium</item>
-        <item name="android:paddingLeft">@dimen/margin_large</item>
-        <item name="android:paddingRight">@dimen/margin_large</item>
     </style>
 
 </resources>
