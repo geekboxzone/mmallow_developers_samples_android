@@ -54,13 +54,15 @@ public class ContactablesLoaderCallbacks implements LoaderManager.LoaderCallback
 
         // BEGIN_INCLUDE(uri_with_query)
         String query = args.getString(QUERY_KEY);
-        Uri uri = Uri.withAppendedPath(ContactsContract.CommonDataKinds.Contactables.CONTENT_FILTER_URI, query);
+        Uri uri = Uri.withAppendedPath(
+                ContactsContract.CommonDataKinds.Contactables.CONTENT_FILTER_URI, query);
         // END_INCLUDE(uri_with_query)
 
 
         // BEGIN_INCLUDE(cursor_loader)
         // Easy way to limit the query to contacts with phone numbers.
-        String selection = ContactsContract.CommonDataKinds.Contactables.HAS_PHONE_NUMBER + " = " + 1;
+        String selection =
+                ContactsContract.CommonDataKinds.Contactables.HAS_PHONE_NUMBER + " = " + 1;
 
         // Sort results such that rows for the same contact stay together.
         String sortBy = ContactsContract.CommonDataKinds.Contactables.LOOKUP_KEY;
