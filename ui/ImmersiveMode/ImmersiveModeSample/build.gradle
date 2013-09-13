@@ -27,7 +27,6 @@ android {
     compileSdkVersion 19
     buildToolsVersion "18.0.1"
 
-
     sourceSets {
         main {
             dirs.each { dir ->
@@ -35,11 +34,9 @@ android {
                 res.srcDirs "src/${dir}/res"
             }
         }
+        instrumentTest.setRoot('tests')
+        instrumentTest.java.srcDirs = ['tests/src']
     }
-
-    instrumentTest.setRoot('tests')
-    instrumentTest.java.srcDirs = ['tests/src']
-
 }
 
 task preflight (dependsOn: parent.preflight) {
