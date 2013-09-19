@@ -17,7 +17,7 @@
 <sample>
     <name>ImmersiveMode</name>
     <package>com.example.android.immersivemode</package>
-    <compileSdkVersion>19</compileSdkVersion>
+    <compileSdkVersion>"android-KeyLimePie"</compileSdkVersion>
 
     <!--TODO: change minSdk if needed-->
     <minSdk>4</minSdk>
