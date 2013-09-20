@@ -8,7 +8,7 @@ dependencies {
 sourceSets {
     main {
         groovy {
-            srcDir new File(rootDir, "../../../../../build/buildSrc/src/main/groovy")
+            srcDir new File(rootDir, "../../build/buildSrc/src/main/groovy")
         }
     }
 }

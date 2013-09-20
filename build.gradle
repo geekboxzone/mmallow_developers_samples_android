@@ -1,0 +1,46 @@
+List<String> samples = [ 
+    "connectivity/bluetooth/BluetoothLeGatt",
+//    "connectivity/sync/BasicSyncAdapter",
+    "connectivity/network/BasicNetworkDemo",
+    "connectivity/network/NetworkConnect",
+    "content/multiuser/AppRestrictions",
+    "content/contacts/BasicContactables",
+    "sampleSamples/BaseSample",
+    "sampleSamples/foo",
+    "sampleSamples/singleViewSample",
+    "sampleSamples/ActivityCards",
+    "ui/notifications/CustomNotifications",
+    "ui/notifications/BasicNotifications",
+//    "ui/ImmersiveMode",
+    "ui/actionbarcompat/ListPopupMenu",
+    "ui/actionbarcompat/Styled",
+    "ui/actionbarcompat/ShareActionProvider",
+    "ui/actionbarcompat/Basic",
+    "ui/actionbar/DoneBar",
+    "ui/accessibility/BasicAccessibility",
+    "ui/lists/CustomChoiceList",
+    "ui/views/TextSwitcher",
+    "ui/views/HorizontalPaging",
+    "ui/holo/BorderlessButtons",
+    "security/keystore/BasicAndroidKeyStore",
+    "views/TextLinkify",
+//    "background/alarms/repeatingAlarm",
+    "media/BasicMediaRouter",
+//    "media/BasicMediaDecoder",
+//    "media/MediaRecorder",
+    "input/multitouch/BasicMultitouch",
+    "input/gestures/BasicGestureDetect",
+]
+
+task build {}
+
+samples.each { sample ->
+    File sampleDir = new File(sample)
+    buildSample = project.task([type: GradleBuild], sample, {
+        buildFile = "${sample}/build.gradle"
+        dir = sample
+        tasks = ["build"]
+    })  
+    build.dependsOn(buildSample)
+}
+
