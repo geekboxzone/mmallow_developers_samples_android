@@ -11,7 +11,8 @@
 # generated files
 bin/
 out/
-gen/
+src/common
+src/template
 
 # Libraries used by the app
 # Can explicitly add if we want, but shouldn't do so blindly.  Licenses, bloat, etc.
@@ -36,4 +37,5 @@ local.properties
 ##Gradle-based build
 .gradle
 build/
+
 

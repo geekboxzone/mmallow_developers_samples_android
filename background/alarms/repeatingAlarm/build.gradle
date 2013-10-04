@@ -1,6 +1,7 @@
 // BEGIN_EXCLUDE
 apply from: "../../../../../build/build.gradle"
 samplegen {
-pathToSamplesCommon "../../../common"
+    pathToBuild "../../../../../build"
+    pathToSamplesCommon "../../../common"
 }
 // END_EXCLUDE
