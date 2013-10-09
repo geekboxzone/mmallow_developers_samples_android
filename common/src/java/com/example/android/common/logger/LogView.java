@@ -15,6 +15,7 @@
  */
 package com.example.android.common.logger;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.*;
 import android.widget.TextView;
@@ -45,6 +46,8 @@ public class LogView extends TextView implements LogNode {
      */
     @Override
     public void println(int priority, String tag, String msg, Throwable tr) {
+
+        
         String priorityStr = null;
 
         // For the purposes of this View, we want to print the priority as readable text.
@@ -79,7 +82,7 @@ public class LogView extends TextView implements LogNode {
 
         // Take the priority, tag, message, and exception, and concatenate as necessary
         // into one usable line of text.
-        StringBuilder outputBuilder = new StringBuilder();
+        final StringBuilder outputBuilder = new StringBuilder();
 
         String delimiter = "\t";
         appendIfNotNull(outputBuilder, priorityStr, delimiter);
@@ -87,8 +90,15 @@ public class LogView extends TextView implements LogNode {
         appendIfNotNull(outputBuilder, msg, delimiter);
         appendIfNotNull(outputBuilder, exceptionStr, delimiter);
 
-        // Actually display the text we just generated within the LogView.
-        appendToLog(outputBuilder.toString());
+        // In case this was originally called from an AsyncTask or some other off-UI thread,
+        // make sure the update occurs within the UI thread.
+        ((Activity) getContext()).runOnUiThread( (new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // Display the text we just generated within the LogView.
+                appendToLog(outputBuilder.toString());
+            }
+        })));
 
         if (mNext != null) {
             mNext.println(priority, tag, msg, tr);
