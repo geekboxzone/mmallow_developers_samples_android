@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.ui.accessibility.BasicAccessibility;
+package com.example.android.basicaccessibility;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -30,7 +30,7 @@ import android.view.accessibility.AccessibilityEvent;
  * Custom view to demonstrate accessibility.
  *
  * <p>This view does not use any framework widgets, so does not get any accessibility features
- * automatically. Instead, we use {@link AccessibilityEvent} to provide accessibility hints to
+ * automatically. Instead, we use {@link android.view.accessibility.AccessibilityEvent} to provide accessibility hints to
  * the OS.
  *
  * <p>For example, if TalkBack is enabled, users will be able to receive spoken feedback as they

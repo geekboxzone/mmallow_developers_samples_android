@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.ui.accessibility.BasicAccessibility;
+package com.example.android.basicaccessibility;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -34,6 +34,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
     }
 }
