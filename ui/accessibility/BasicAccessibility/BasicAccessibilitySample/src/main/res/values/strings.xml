@@ -16,8 +16,6 @@ limitations under the License.
 -->
 
 <resources>
-
-    <string name="app_name" >Accessibility Sample</string>
     <string name="composeButtonPressed">(Compose button pressed.)</string>
     <string name="discardButtonPressed">(Discard button pressed.)</string>
     <string name="infoButtonPressed">(Info button pressed.)</string>
