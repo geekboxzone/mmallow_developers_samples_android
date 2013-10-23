@@ -28,12 +28,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -96,9 +94,9 @@ public class SelectionBuilder {
     private static final String TAG = "basicsyncadapter";
 
     private String mTable = null;
-    private Map<String, String> mProjectionMap = Maps.newHashMap();
+    private Map<String, String> mProjectionMap = new HashMap<String, String>();
     private StringBuilder mSelection = new StringBuilder();
-    private ArrayList<String> mSelectionArgs = Lists.newArrayList();
+    private ArrayList<String> mSelectionArgs = new ArrayList<String>();
 
     /**
      * Reset any internal state, allowing this builder to be recycled.
