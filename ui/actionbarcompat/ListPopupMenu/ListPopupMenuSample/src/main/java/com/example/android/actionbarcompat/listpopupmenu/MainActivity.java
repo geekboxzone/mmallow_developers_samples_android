@@ -17,10 +17,7 @@
 package com.example.android.actionbarcompat.listpopupmenu;
 
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 /**
  * This sample shows you how to use {@link android.support.v7.widget.PopupMenu PopupMenu} from
@@ -38,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         // Set content view (which contains a PopupListFragment)
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
     }
 
 }
