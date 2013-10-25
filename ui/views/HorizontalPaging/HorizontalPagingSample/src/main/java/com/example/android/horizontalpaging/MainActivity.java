@@ -1,7 +1,5 @@
 package com.example.android.horizontalpaging;
 
-import java.util.Locale;
-
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -9,15 +7,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
@@ -37,7 +33,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     ViewPager mViewPager;
 
     /**
-     * Create the activity. Sets up an {@link ActionBar} with tabs, and then configures the
+     * Create the activity. Sets up an {@link android.app.ActionBar} with tabs, and then configures the
      * {@link ViewPager} contained inside R.layout.activity_main.
      *
      * <p>A {@link SectionsPagerAdapter} will be instantiated to hold the different pages of
@@ -51,7 +47,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Load the UI from res/layout/activity_main.xml
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
 
         // Set up the action bar. The navigation mode is set to NAVIGATION_MODE_TABS, which will
         // cause the ActionBar to render a set of tabs. Note that these tabs are *not* rendered
@@ -101,7 +97,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
      * Update {@link ViewPager} after a tab has been selected in the ActionBar.
      *
      * @param tab Tab that was selected.
-     * @param fragmentTransaction A {@link FragmentTransaction} for queuing fragment operations to
+     * @param fragmentTransaction A {@link android.app.FragmentTransaction} for queuing fragment operations to
      *                            execute once this method returns. This FragmentTransaction does
      *                            not support being added to the back stack.
      */
@@ -114,14 +110,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     // END_INCLUDE (on_tab_selected)
 
     /**
-     * Unused. Required for {@link ActionBar.TabListener}.
+     * Unused. Required for {@link android.app.ActionBar.TabListener}.
      */
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
     }
 
     /**
-     * Unused. Required for {@link ActionBar.TabListener}.
+     * Unused. Required for {@link android.app.ActionBar.TabListener}.
      */
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
