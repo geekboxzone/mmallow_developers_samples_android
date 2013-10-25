@@ -15,15 +15,9 @@
   limitations under the License.
 -->
 <resources>
-
-    <string name="app_name">ABC ShareActionProvider</string>
-    <string name="intro_message">This sample demonstrates how to show a
-        <i>ShareActionProvider</i>, updated for the selected content.</string>
     <string name="menu_share">Share</string>
-
     <string name="quote_1">Expectation is the root of all heartache - William Shakespeare</string>
     <string name="quote_2">The true sign of intelligence is not knowledge but imagination - Albert
         Einstein</string>
     <string name="quote_3">As for me, all I know is that I know nothing - Socrates</string>
-
 </resources>

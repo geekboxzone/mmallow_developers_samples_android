@@ -16,8 +16,6 @@
 
 package com.example.android.actionbarcompat.shareactionprovider;
 
-import com.example.android.actionbarcompat.shareactionprovider.content.ContentItem;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -32,6 +30,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.android.actionbarcompat.shareactionprovider.content.ContentItem;
 
 import java.util.ArrayList;
 
@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         // Set content view (which contains a CheeseListFragment)
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
 
         // Retrieve the ViewPager from the content view
         ViewPager vp = (ViewPager) findViewById(R.id.viewpager);

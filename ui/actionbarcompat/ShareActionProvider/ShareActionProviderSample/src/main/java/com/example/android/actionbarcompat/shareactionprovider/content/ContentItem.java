@@ -72,7 +72,7 @@ public class ContentItem {
     }
 
     /**
-     * Returns an {@link Intent} which can be used to share this item's content with other
+     * Returns an {@link android.content.Intent} which can be used to share this item's content with other
      * applications.
      *
      * @param context - Context to be used for fetching resources if needed
