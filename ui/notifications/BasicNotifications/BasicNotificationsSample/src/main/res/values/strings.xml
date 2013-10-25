@@ -16,7 +16,6 @@ limitations under the License.
 -->
 <resources>
 
-    <string name="app_name">Basic Notifications</string>
     <string name="description">
         Tap the button below to send a notification.\n\nThe notification\'s icon will immediately
         appear in the notification bar. Drag the notification bar open to see the full
