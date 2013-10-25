@@ -16,6 +16,8 @@
 
 <resources>
 
-    <style name="Theme.Base" parent="android:Theme.Holo.Light" />
+    <!-- Meta-dimension that switches on screen size -->
+
+    <dimen name="page_margin">@dimen/margin_medium</dimen>
 
 </resources>
