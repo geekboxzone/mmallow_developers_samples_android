@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.ui.views.textswitcher;
+package com.example.android.textswitcher;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -25,16 +25,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
-import android.widget.ViewSwitcher;
 import android.widget.ViewSwitcher.ViewFactory;
 
-import com.example.android.view.textswitcher.R;
-
 /**
- * This sample shows the use of the {@link TextSwitcher} View with animations. A
- * {@link TextSwitcher} is a special type of {@link ViewSwitcher} that animates
+ * This sample shows the use of the {@link android.widget.TextSwitcher} View with animations. A
+ * {@link android.widget.TextSwitcher} is a special type of {@link android.widget.ViewSwitcher} that animates
  * the current text out and new text in when
- * {@link TextSwitcher#setText(CharSequence)} is called.
+ * {@link android.widget.TextSwitcher#setText(CharSequence)} is called.
  */
 public class MainActivity extends Activity {
     private TextSwitcher mSwitcher;
@@ -43,7 +40,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
 
         // Get the TextSwitcher view from the layout
         mSwitcher = (TextSwitcher) findViewById(R.id.switcher);
@@ -88,10 +85,10 @@ public class MainActivity extends Activity {
 
     // BEGIN_INCLUDE(factory)
     /**
-     * The {@link ViewFactory} used to create {@link TextView}s that the
-     * {@link TextSwitcher} will switch between.
+     * The {@link android.widget.ViewSwitcher.ViewFactory} used to create {@link android.widget.TextView}s that the
+     * {@link android.widget.TextSwitcher} will switch between.
      */
-    private ViewSwitcher.ViewFactory mFactory = new ViewFactory() {
+    private ViewFactory mFactory = new ViewFactory() {
 
         @Override
         public View makeView() {
