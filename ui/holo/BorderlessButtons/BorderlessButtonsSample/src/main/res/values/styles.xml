@@ -16,6 +16,16 @@
 
 <resources>
 
-    <dimen name="page_margin">@dimen/margin_huge</dimen>
+    <!-- Widget styling -->
+
+    <style name="Widget.DescriptionBar">
+        <item name="android:background">#fb3</item>
+        <item name="android:paddingTop">@dimen/margin_medium</item>
+        <item name="android:paddingBottom">@dimen/margin_medium</item>
+        <item name="android:paddingLeft">@dimen/page_margin</item>
+        <item name="android:paddingRight">@dimen/page_margin</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
 
 </resources>

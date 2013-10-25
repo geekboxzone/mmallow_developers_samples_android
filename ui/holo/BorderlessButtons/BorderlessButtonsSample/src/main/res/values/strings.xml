@@ -15,19 +15,16 @@
   -->
 
 <resources>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
 
-    <!-- Define standard dimensions to comply with Holo-style grids and rhythm. -->
+    <string name="dummy_title">Dummy title</string>
+    <string name="dummy_subtitle">Dummy subtitle</string>
 
-    <dimen name="margin_tiny">4dp</dimen>
-    <dimen name="margin_small">8dp</dimen>
-    <dimen name="margin_medium">16dp</dimen>
-    <dimen name="margin_large">32dp</dimen>
-    <dimen name="margin_huge">64dp</dimen>
+    <string name="delete_content_description">Delete</string>
 
-    <dimen name="standard_touch_target_size">48dp</dimen>
+    <string name="touched_primary_message">Touched primary list item target.</string>
+    <string name="touched_secondary_message">Touched secondary list item target (delete).</string>
 
-    <!-- Meta-dimension that switches on screen size -->
-
-    <dimen name="page_margin">@dimen/margin_medium</dimen>
-
+    <string name="docs_link_title">Design docs: borderless buttons</string>
 </resources>
