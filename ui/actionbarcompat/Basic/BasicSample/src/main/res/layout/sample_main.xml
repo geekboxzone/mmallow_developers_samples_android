@@ -14,14 +14,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<resources>
-
-    <string name="app_name">ABC Basic</string>
-    <string name="menu_refresh">Refresh</string>
-    <string name="menu_location">Location</string>
-    <string name="menu_settings">Settings</string>
-    <string name="main_description">This is a basic Activity showing an
-        Action Bar. Items that are not shown as action items on the Action Bar are displayed in
-        the action bar overflow.</string>
-
-</resources>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:text="@string/intro_message"
+    android:gravity="center" />

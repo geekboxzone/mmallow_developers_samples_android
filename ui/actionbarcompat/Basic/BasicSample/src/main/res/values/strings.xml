@@ -14,9 +14,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:text="@string/main_description"
-    android:gravity="center" />
+<resources>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_location">Location</string>
+    <string name="menu_settings">Settings</string>
+</resources>
