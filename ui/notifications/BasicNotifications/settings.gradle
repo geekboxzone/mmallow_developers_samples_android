@@ -1,1 +1,4 @@
-include ':BasicNotifications'
+
+
+
+include 'BasicNotificationsSample'
