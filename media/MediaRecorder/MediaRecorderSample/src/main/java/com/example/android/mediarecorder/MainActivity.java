@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.example.android.media.recorder;
+package com.example.android.mediarecorder;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.hardware.Camera;
 import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.TextureView;
@@ -36,8 +36,8 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- *  This activity uses the camera/camcorder as the A/V source for the {@link MediaRecorder} API.
- *  A {@link TextureView} is used as the camera preview which limits the code to API 14+. This
+ *  This activity uses the camera/camcorder as the A/V source for the {@link android.media.MediaRecorder} API.
+ *  A {@link android.view.TextureView} is used as the camera preview which limits the code to API 14+. This
  *  can be easily replaced with a {@link android.view.SurfaceView} to run on older devices.
  */
 public class MainActivity extends Activity {
@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
 
         mPreview = (TextureView) findViewById(R.id.surface_view);
         captureButton = (Button) findViewById(R.id.button_capture);
@@ -61,8 +61,8 @@ public class MainActivity extends Activity {
 
     /**
      * The capture button controls all user interaction. When recording, the button click
-     * stops recording, releases {@link MediaRecorder} and {@link Camera}. When not recording,
-     * it prepares the {@link MediaRecorder} and starts recording.
+     * stops recording, releases {@link android.media.MediaRecorder} and {@link android.hardware.Camera}. When not recording,
+     * it prepares the {@link android.media.MediaRecorder} and starts recording.
      *
      * @param view the view generating the event.
      */
@@ -94,13 +94,6 @@ public class MainActivity extends Activity {
 
     private void setCaptureButtonText(String title) {
         captureButton.setText(title);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 
     @Override
@@ -201,7 +194,7 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * Asynchronous task for preparing the {@link MediaRecorder} since it's a long blocking
+     * Asynchronous task for preparing the {@link android.media.MediaRecorder} since it's a long blocking
      * operation.
      */
     class MediaPrepareTask extends AsyncTask<Void, Void, Boolean> {
