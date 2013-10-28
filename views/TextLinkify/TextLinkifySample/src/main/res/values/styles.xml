@@ -14,11 +14,9 @@
   limitations under the License.
 -->
 
-<resources>
-
-    <!--
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw600dp devices (e.g. 7" tablets) here.
-    -->
-
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="LinkText">
+        <item name="android:paddingTop">9dp</item>
+        <item name="android:paddingBottom">9dp</item>
+    </style>
 </resources>

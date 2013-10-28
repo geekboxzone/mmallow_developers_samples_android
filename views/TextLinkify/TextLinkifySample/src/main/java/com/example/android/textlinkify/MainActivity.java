@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.views.textlinkify;
+package com.example.android.textlinkify;
 
 import android.app.Activity;
 import android.graphics.Typeface;
@@ -29,7 +29,7 @@ import android.widget.TextView;
 
 /**
  * This sample demonstrates how clickable links can be added to a
- * {@link TextView}.
+ * {@link android.widget.TextView}.
  *
  * <p>This can be done in three ways:
  * <ul>
@@ -38,7 +38,7 @@ import android.widget.TextView;
  * {@link android.widget.TextView#setAutoLinkMask(int)} using an option from
  * {@link android.text.util.Linkify}</li>
  *
- * <li><b>Parsing a String as HTML:</b> See {@link Html#fromHtml(String)})</li>
+ * <li><b>Parsing a String as HTML:</b> See {@link android.text.Html#fromHtml(String)})</li>
  *
  * <li><b>Manually by constructing a {@link android.text.SpannableString}:</b> Consisting of
  * {@link android.text.style.StyleSpan} and {@link android.text.style.URLSpan} objects that
@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
 
         // BEGIN_INCLUDE(text_auto_linkify)
         /*
