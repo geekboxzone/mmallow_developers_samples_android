@@ -1,1 +1,4 @@
-include ':CustomNotifications'
+
+
+
+include 'CustomNotificationsSample'

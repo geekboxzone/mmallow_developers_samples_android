@@ -16,7 +16,6 @@
 
 <resources>
 
-    <string name="app_name">CustomNotifications</string>
     <string name="expanded">I\'m the expanded notification.\nCollapse me!</string>
     <string name="collapsed">I\'m the collapsed notification.\nCreated at: %s</string>
     <string name="show_notification">Show Notification</string>
