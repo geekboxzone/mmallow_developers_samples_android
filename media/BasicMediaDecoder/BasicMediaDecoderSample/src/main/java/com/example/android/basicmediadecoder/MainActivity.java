@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 
-package com.example.android.media.basicmediadecoder;
+package com.example.android.basicmediadecoder;
 
-
-import com.example.android.common.media.MediaCodecWrapper;
 
 import android.animation.TimeAnimator;
 import android.app.Activity;
@@ -25,14 +23,21 @@ import android.media.MediaCodec;
 import android.media.MediaExtractor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.*;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.Surface;
+import android.view.TextureView;
+import android.view.View;
 import android.widget.TextView;
+
+import com.example.android.common.media.MediaCodecWrapper;
 
 import java.io.IOException;
 
 /**
- * This activity uses a {@link TextureView} to render the frames of a video decoded using
- * {@link MediaCodec} API.
+ * This activity uses a {@link android.view.TextureView} to render the frames of a video decoded using
+ * {@link android.media.MediaCodec} API.
  */
 public class MainActivity extends Activity {
 
@@ -52,7 +57,7 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
         mPlaybackView = (TextureView) findViewById(R.id.PlaybackView);
         mAttribView =  (TextView)findViewById(R.id.AttribView);
 
