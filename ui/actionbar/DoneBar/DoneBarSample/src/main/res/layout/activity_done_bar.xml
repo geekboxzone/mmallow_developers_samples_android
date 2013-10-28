@@ -14,11 +14,19 @@
   limitations under the License.
   -->
 
-<resources>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <!-- Semantic definitions -->
+    <LinearLayout style="@style/Widget.SampleContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <dimen name="horizontal_page_margin">@dimen/margin_huge</dimen>
-    <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
+        <TextView style="@style/Widget.SampleMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/donebaractivity_description" />
 
-</resources>
+    </LinearLayout>
+</ScrollView>
