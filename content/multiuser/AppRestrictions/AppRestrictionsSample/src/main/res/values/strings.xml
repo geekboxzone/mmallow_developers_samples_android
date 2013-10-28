@@ -14,7 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">App Restrictions Demo</string>
     <string name="restrictions_activity_label">Custom app restrictions</string>
     <string name="boolean_entry_title">Test boolean type</string>
     <string name="choice_entry_title">Test choice type</string>
