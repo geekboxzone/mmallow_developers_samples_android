@@ -14,19 +14,19 @@
   limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/Widget.SampleDashboard.Item"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView android:id="@android:id/text1"
-        style="@style/Widget.SampleDashboard.Item.Title"
+    <LinearLayout style="@style/Widget.SampleContentContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <TextView android:id="@android:id/text2"
-        style="@style/Widget.SampleDashboard.Item.Description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        <TextView style="@style/Widget.SampleMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/donebuttonactivity_description" />
+
+    </LinearLayout>
+</ScrollView>
