@@ -17,7 +17,6 @@
 
 <resources>
 
-    <string name="app_name">TextLinkify Sample</string>
     <string name="intro">This sample illustrates how links can be added to a TextView.
     \nThis can be done either automatically by setting the <i>autoLink</i> property
     or explicitly.</string>
