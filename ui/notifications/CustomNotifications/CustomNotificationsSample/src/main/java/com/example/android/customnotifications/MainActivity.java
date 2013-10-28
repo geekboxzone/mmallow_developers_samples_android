@@ -35,11 +35,11 @@ public class MainActivity extends Activity {
      *
      * <p>On API level 16 and above a big content view is also defined that is used for the
      * 'expanded' notification. The notification is created by the NotificationCompat.Builder.
-     * The expanded content view is set directly on the {@link Notification} once it has been build.
-     * (See {@link Notification#bigContentView}.) </p>
+     * The expanded content view is set directly on the {@link android.app.Notification} once it has been build.
+     * (See {@link android.app.Notification#bigContentView}.) </p>
      *
-     * <p>The content views are inflated as {@link RemoteViews} directly from their XML layout
-     * definitions using {@link RemoteViews#RemoteViews(String, int)}.</p>
+     * <p>The content views are inflated as {@link android.widget.RemoteViews} directly from their XML layout
+     * definitions using {@link android.widget.RemoteViews#RemoteViews(String, int)}.</p>
      */
     private void createNotification() {
         // BEGIN_INCLUDE(notificationCompat)
@@ -109,7 +109,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
     }
 
     /**
