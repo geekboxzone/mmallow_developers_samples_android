@@ -14,12 +14,9 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
-
-
 <sample>
     <name>NetworkConnect</name>
-    <group>NoGroup</group>
+    <group>Connectivity</group>
     <package>com.example.android.networkconnect</package>
 
 

@@ -16,6 +16,7 @@
 -->
 <sample>
     <name>repeatingAlarm</name>
+    <group>Background</group>
     <package>com.example.android.repeatingalarm</package>
 
 

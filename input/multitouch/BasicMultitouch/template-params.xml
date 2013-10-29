@@ -14,12 +14,9 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
-
-
 <sample>
     <name>BasicMultitouch</name>
-    <group>NoGroup</group>
+    <group>Input</group>
     <package>com.example.android.basicmultitouch</package>
 
 

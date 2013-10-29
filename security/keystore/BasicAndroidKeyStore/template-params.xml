@@ -14,11 +14,9 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
-
-
 <sample>
     <name>BasicAndroidKeyStore</name>
+    <group>Security</group>
     <package>com.example.android.basicandroidkeystore</package>
 
     <!-- change minSdk if needed-->
