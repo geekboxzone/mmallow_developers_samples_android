@@ -16,8 +16,8 @@
 -->
 <sample>
     <name>StorageClient</name>
+    <group>Content</group>
     <package>com.example.android.storageclient</package>
-    <group>NoGroup</group>
     <!-- change minSdk if needed-->
     <minSdk>4</minSdk>
     <compileSdkVersion>19</compileSdkVersion>

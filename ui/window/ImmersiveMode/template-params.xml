@@ -18,6 +18,7 @@
     <name>ImmersiveMode</name>
     <group>UI</group>
     <package>com.example.android.immersivemode</package>
+    
     <compileSdkVersion>19</compileSdkVersion>
 
     <!--TODO: change minSdk if needed-->

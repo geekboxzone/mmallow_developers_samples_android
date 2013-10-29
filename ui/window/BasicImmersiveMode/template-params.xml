@@ -16,8 +16,8 @@
 -->
 <sample>
     <name>BasicImmersiveMode</name>
-    <package>com.example.android.basicimmersivemode</package>
     <group>UI</group>
+    <package>com.example.android.basicimmersivemode</package>
     
 
 

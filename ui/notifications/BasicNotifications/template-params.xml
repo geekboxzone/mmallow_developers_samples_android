@@ -17,9 +17,8 @@
 
 <sample>
     <name>BasicNotifications</name>
-    <group>NoGroup</group>
+    <group>UI</group>
     <package>com.example.android.basicnotifications</package>
-
     <!-- change minSdk if needed-->
     <minSdk>8</minSdk>
 

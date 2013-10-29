@@ -16,8 +16,8 @@
 -->
 <sample>
     <name>AdvancedImmersiveMode</name>
-    <package>com.example.android.advancedimmersivemode</package>
     <group>UI</group>
+    <package>com.example.android.advancedimmersivemode</package>
 
 
     <!-- change minSdk if needed-->

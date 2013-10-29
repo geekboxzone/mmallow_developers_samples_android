@@ -14,12 +14,9 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
-
-
 <sample>
     <name>BasicContactables</name>
-    <group>NoGroup</group>
+    <group>Content</group>
     <package>com.example.android.basiccontactables</package>
 
 
