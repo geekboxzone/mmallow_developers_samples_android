@@ -13,6 +13,7 @@ bin/
 out/
 src/common
 src/template
+_index.jd
 
 # Libraries used by the app
 # Can explicitly add if we want, but shouldn't do so blindly.  Licenses, bloat, etc.
@@ -37,5 +38,4 @@ local.properties
 ##Gradle-based build
 .gradle
 build/
-
 

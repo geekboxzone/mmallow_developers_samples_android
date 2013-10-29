@@ -32,6 +32,7 @@ List<String> samples = [
 ]
 
 List<String> taskNames = [
+    "clean",
     "refresh",
     "build",
     "emitAnt",
