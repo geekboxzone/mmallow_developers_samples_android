@@ -15,7 +15,7 @@
   -->
 
 <!--
-    The ListView from activity_main.xml has a choiceMode set, meaning that when a user
+    The ListView from sample_main.xml has a choiceMode set, meaning that when a user
     selects a list item, the ListView will set the state for that item's root view
     (this CheckableLinearLayout) to "checked". Note that this requires that the root view
     implements the Checkable interface. Once the root view is checked, any children that
