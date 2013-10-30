@@ -1,11 +1,9 @@
-
-
-
-
-// BEGIN_EXCLUDE
-apply from: "../../../../build/build.gradle"
-samplegen {
-  pathToBuild "../../../../build"
-  pathToSamplesCommon "../../common"
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.5.+'
+    }
 }
-// END_EXCLUDE

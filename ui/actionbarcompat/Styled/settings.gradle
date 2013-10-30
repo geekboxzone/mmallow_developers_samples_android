@@ -1,4 +1,1 @@
-
-
-
-include 'StyledSample'
+include ':Styled'

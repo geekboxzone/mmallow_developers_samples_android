@@ -1,4 +1,1 @@
-
-
-
-include 'HorizontalPagingSample'
+include ':HorizontalPaging'
