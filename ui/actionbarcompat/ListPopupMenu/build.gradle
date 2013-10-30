@@ -1,10 +1,8 @@
-// BEGIN_EXCLUDE
-import com.example.android.samples.build.SampleGenPlugin
-apply plugin: SampleGenPlugin
-
-samplegen {
-  pathToBuild "../../../../../build"
-  pathToSamplesCommon "../../../common"
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.5.+'
+    }
 }
-apply from: "../../../../../build/build.gradle"
-// END_EXCLUDE

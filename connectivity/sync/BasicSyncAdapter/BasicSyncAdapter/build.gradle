@@ -1,0 +1,15 @@
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:14.0.+'
+    compile "com.android.support:support-v4:18.0.+"
+}
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "18.0.0"
+}
