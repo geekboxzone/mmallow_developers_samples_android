@@ -1,1 +1,4 @@
-include ':AppRestrictions'
+
+
+
+include 'AppRestrictionsSample'

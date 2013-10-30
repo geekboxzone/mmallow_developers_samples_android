@@ -1,1 +1,4 @@
-include ':BasicMultitouch'
+
+
+
+include 'BasicMultitouchSample'
