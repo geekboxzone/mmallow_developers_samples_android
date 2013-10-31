@@ -1,1 +1,4 @@
-include ':BasicSyncAdapter'
+
+
+
+include 'BasicSyncAdapterSample'
