@@ -15,7 +15,7 @@
  limitations under the License.
 -->
 <sample>
-    <name>repeatingAlarm</name>
+    <name>RepeatingAlarm</name>
     <group>Background</group>
     <package>com.example.android.repeatingalarm</package>
 

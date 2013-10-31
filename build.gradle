@@ -30,7 +30,7 @@ List<String> samples = [
 "ui/window/BasicImmersiveMode",
 "ui/window/AdvancedImmersiveMode",
 "ui/window/ImmersiveMode",
-"background/alarms/repeatingAlarm"
+"background/alarms/RepeatingAlarm"
 ]
 
 List<String> taskNames = [
