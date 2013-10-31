@@ -40,6 +40,7 @@ List<String> taskNames = [
     "emitAnt",
     "emitGradle",
     "emitBrowseable",
+    "emitGradleZip",
 ]
 
 taskNames.each { taskName ->
