@@ -1,6 +1,0 @@
-page.tags="gestures", "motion event"
-sample.group=Input
-@jd:body
-
-<p>Example code that shows how to handle gestures in apps and games.</p>
-

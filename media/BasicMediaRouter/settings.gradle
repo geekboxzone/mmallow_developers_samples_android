@@ -1,1 +1,4 @@
-include ':BasicMediaRouter'
+
+
+
+include 'BasicMediaRouterSample'
