@@ -15,9 +15,9 @@
  limitations under the License.
 -->
 <sample>
-    <name>ListPopupMenu</name>
+    <name>ActionBarCompat-ShareActionProvider</name>
     <group>UI</group>
-    <package>com.example.android.actionbarcompat.listpopupmenu</package>
+    <package>com.example.android.actionbarcompat.shareactionprovider</package>
 
     <dependency>com.android.support:appcompat-v7:18.0.+</dependency>
 
@@ -27,8 +27,8 @@
     <strings>
         <intro>
             <![CDATA[
-            This sample shows you how to use {@link android.support.v7.widget.PopupMenu PopupMenu}
-            from ActionBarCompat to create a list, with each item having a dropdown menu.
+            This sample shows you how a provide a context-sensitive ShareActionProvider with
+            ActionBarCompat, backwards compatible to API v7.
             ]]>
         </intro>
     </strings>
