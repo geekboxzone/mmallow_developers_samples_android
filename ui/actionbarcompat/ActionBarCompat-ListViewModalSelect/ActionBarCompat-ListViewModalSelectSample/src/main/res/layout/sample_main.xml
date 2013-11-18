@@ -30,7 +30,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/intro_message"
+        android:text="@string/instructions"
         android:padding="16dp"
         android:textAppearance="?android:textAppearanceMedium"
         android:lineSpacingMultiplier="1.1"

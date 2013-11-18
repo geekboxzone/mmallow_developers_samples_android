@@ -1,25 +1,14 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
 
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.5.+'
-    }
+
+
+
+// BEGIN_EXCLUDE
+import com.example.android.samples.build.SampleGenPlugin
+apply plugin: SampleGenPlugin
+
+samplegen {
+  pathToBuild "../../../../../build"
+  pathToSamplesCommon "../../../common"
 }
-
-apply plugin: 'android'
-
-dependencies {
-    compile "com.android.support:appcompat-v7:+"
-}
-
-android {
-    compileSdkVersion 17
-    buildToolsVersion "18.0.1"
-
-    defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 16
-    }
-}
+apply from: "../../../../../build/build.gradle"
+// END_EXCLUDE
