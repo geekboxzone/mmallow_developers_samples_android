@@ -15,20 +15,21 @@
  limitations under the License.
 -->
 <sample>
-    <name>ShareActionProvider</name>
+    <name>ActionBarCompat-Styled</name>
     <group>UI</group>
-    <package>com.example.android.actionbarcompat.shareactionprovider</package>
+    <package>com.example.android.actionbarcompat.styled</package>
 
     <dependency>com.android.support:appcompat-v7:18.0.+</dependency>
 
     <!-- change minSdk if needed-->
     <minSdk>7</minSdk>
 
+
     <strings>
         <intro>
             <![CDATA[
-            This sample shows you how a provide a context-sensitive ShareActionProvider with
-            ActionBarCompat, backwards compatible to API v7.
+            This sample shows you how to use ActionBarCompat with a customized theme. It utilizes a
+            split action bar when running on a device with a narrow display, and show three tabs.
             ]]>
         </intro>
     </strings>
