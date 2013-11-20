@@ -15,7 +15,7 @@
  limitations under the License.
 -->
 <sample>
-    <name>Basic</name>
+    <name>ActionBarCompat-Basic</name>
     <group>UI</group>
     <package>com.example.android.actionbarcompat.basic</package>
 
