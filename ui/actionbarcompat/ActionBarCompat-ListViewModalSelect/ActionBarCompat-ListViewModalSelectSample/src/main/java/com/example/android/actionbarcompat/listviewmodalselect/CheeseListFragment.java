@@ -15,9 +15,6 @@
  */
 package com.example.android.actionbarcompat.listviewmodalselect;
 
-import com.example.android.common.actionbarcompat.MultiSelectionUtil;
-import com.example.android.common.dummydata.Cheeses;
-
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBarActivity;
@@ -28,6 +25,9 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+
+import com.example.android.common.actionbarcompat.MultiSelectionUtil;
+import com.example.android.common.dummydata.Cheeses;
 
 import java.util.ArrayList;
 import java.util.Iterator;

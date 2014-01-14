@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         // Set content view (which contains a CheeseListFragment)
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.sample_main);
     }
 
 }
