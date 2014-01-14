@@ -16,8 +16,7 @@
 -->
 <resources>
 
-    <string name="app_name">ABC ListView Modal</string>
-    <string name="intro_message">This sample demonstrates how to provide a
+    <string name="instructions">This sample demonstrates how to provide a
         <em>MULTIPLE_MODAL</em> ListView choice mode, compatible from API v7.
     </string>
     <string name="menu_remove">Remove</string>
