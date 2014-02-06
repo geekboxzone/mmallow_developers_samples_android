@@ -30,7 +30,15 @@ List<String> samples = [
 "ui/window/BasicImmersiveMode",
 "ui/window/AdvancedImmersiveMode",
 "ui/window/ImmersiveMode",
-"background/alarms/RepeatingAlarm"
+"background/alarms/RepeatingAlarm",
+"renderScript/BasicRenderScript",
+"renderScript/RenderScriptIntrinsic",
+"ui/views/SlidingTabs/SlidingTabsBasic",
+"ui/views/SlidingTabs/SlidingTabsColors",
+"connectivity/nfc/CardEmulation",
+"connectivity/nfc/CardReader",
+"sensors/BatchStepSensor"
+
 ]
 
 List<String> taskNames = [

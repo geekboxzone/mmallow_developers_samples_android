@@ -42,12 +42,12 @@ android {
         instrumentTest.setRoot('tests')
         instrumentTest.java.srcDirs = ['tests/src']
 
-		defaultConfig {
-		
+        defaultConfig {
+        
             renderscriptTargetApi 18
             renderscriptSupportMode true
     
-		}
+        }
     }
 }
 // BEGIN_EXCLUDE
