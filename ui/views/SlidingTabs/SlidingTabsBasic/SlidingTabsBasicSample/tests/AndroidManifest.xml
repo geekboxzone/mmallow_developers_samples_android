@@ -40,7 +40,7 @@
           android:versionName="1.0">
 
     <uses-sdk
-            android:minSdkVersion="18"
+            android:minSdkVersion="4"
             android:targetSdkVersion="19" />
 
     <!-- We add an application tag here just so that we can indicate that
