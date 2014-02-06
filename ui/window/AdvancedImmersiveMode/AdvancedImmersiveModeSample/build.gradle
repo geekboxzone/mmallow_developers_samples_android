@@ -1,6 +1,3 @@
-
-
-
 buildscript {
     repositories {
         mavenCentral()
@@ -39,6 +36,7 @@ android {
         }
         instrumentTest.setRoot('tests')
         instrumentTest.java.srcDirs = ['tests/src']
+
     }
 }
 // BEGIN_EXCLUDE
