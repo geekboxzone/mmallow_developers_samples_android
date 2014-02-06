@@ -40,7 +40,7 @@ public class AccountStorage {
         synchronized(sAccountLock) {
             Log.i(TAG, "Setting account number: " + s);
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(c);
-            prefs.edit().putString(PREF_ACCOUNT_NUMBER, s);
+            prefs.edit().putString(PREF_ACCOUNT_NUMBER, s).commit();
             sAccount = s;
         }
     }
