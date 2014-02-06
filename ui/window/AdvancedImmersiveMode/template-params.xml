@@ -27,20 +27,17 @@
     <strings>
         <intro>
             <![CDATA[
-            \"Immersive Mode\" is a new UI mode which improves \"hide full screen\" and
+            \"Immersive Mode\", added in Android 4.4, improves the \"hide full screen\" and
             \"hide nav bar\" modes, by letting users swipe the bars in and out.  This sample
-            lets the user experiment with immersive mode by enabling it and seeing how it interacts
+            lets the user experiment with immersive mode by seeing how it interacts
             with some of the other UI flags related to full-screen apps.
-            \n\nThis sample also lets the user choose between normal immersive mode and "sticky"
-            immersive mode, which removes the status bar and nav bar
-            a few seconds after the user has swiped them back in.
             ]]>
         </intro>
         <sample_action>Try these settings!</sample_action>
     </strings>
 
     <template src="base"/>
-    <template src="SingleView"/>
+    <template src="FragmentView"/>
     <common src="logger"/>
     <common src="activities"/>
 
