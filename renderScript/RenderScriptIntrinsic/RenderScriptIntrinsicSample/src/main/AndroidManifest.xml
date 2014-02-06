@@ -26,13 +26,13 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
+        android:label="RenderScriptIntrinsic"
         android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme">
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="RenderScriptIntrinsic"
             android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
