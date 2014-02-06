@@ -19,7 +19,7 @@
 
 <sample>
     <name>SlidingTabsBasic</name>
-    <group>NoGroup</group>
+    <group>UI</group>
     <package>com.example.android.slidingtabsbasic</package>
 
     <!-- change minSdk if needed-->
