@@ -17,6 +17,8 @@
 package com.example.android.common.dummydata;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Random;
 
 /**
  * Dummy data.
@@ -161,5 +163,21 @@ public class Cheeses {
             items.add(CHEESES[i]);
         }
         return items;
+    }
+
+    /**
+     * Return a list of random cheeses.
+     *
+     * @param count the amount of cheeses to return.
+     */
+    public static ArrayList<String> randomList(int count) {
+        Random random = new Random();
+        HashSet<String> items = new HashSet<String>();
+
+        while (items.size() < count) {
+            items.add(CHEESES[random.nextInt(CHEESES.length)]);
+        }
+
+        return new ArrayList<String>(items);
     }
 }
