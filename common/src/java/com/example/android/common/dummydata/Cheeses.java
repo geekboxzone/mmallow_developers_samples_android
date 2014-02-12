@@ -174,6 +174,9 @@ public class Cheeses {
         Random random = new Random();
         HashSet<String> items = new HashSet<String>();
 
+        // Make sure that don't infinity loop
+        count = Math.min(count, CHEESES.length);
+
         while (items.size() < count) {
             items.add(CHEESES[random.nextInt(CHEESES.length)]);
         }
