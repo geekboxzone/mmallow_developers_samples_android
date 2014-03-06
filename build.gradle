@@ -20,9 +20,9 @@ List<String> samples = [
 "ui/lists/CustomChoiceList",
 "ui/views/TextSwitcher",
 "ui/views/HorizontalPaging",
-"ui/actionbarcompat/Styled",
-"ui/actionbarcompat/ListPopupMenu",
-"ui/actionbarcompat/ShareActionProvider",
+"ui/actionbarcompat/ActionBarCompat-Styled",
+"ui/actionbarcompat/ActionBarCompat-ListPopupMenu",
+"ui/actionbarcompat/ActionBarCompat-ShareActionProvider",
 "ui/actionbarcompat/Basic",
 "ui/notifications/BasicNotifications",
 "ui/notifications/CustomNotifications",
@@ -30,7 +30,18 @@ List<String> samples = [
 "ui/window/BasicImmersiveMode",
 "ui/window/AdvancedImmersiveMode",
 "ui/window/ImmersiveMode",
-"background/alarms/RepeatingAlarm"
+"background/alarms/RepeatingAlarm",
+//"renderScript/BasicRenderScript",
+//"renderScript/RenderScriptIntrinsic",
+//"sensors/BatchStepSensor"
+"ui/views/SlidingTabs/SlidingTabsBasic",
+"ui/views/SlidingTabs/SlidingTabsColors",
+"connectivity/nfc/CardEmulation",
+"connectivity/nfc/CardReader",
+"ui/graphics/DisplayingBitmaps",
+"ui/transition/AdapterTransition",
+"ui/transition/BasicTransition",
+"media/MediaRouter"
 ]
 
 List<String> taskNames = [
