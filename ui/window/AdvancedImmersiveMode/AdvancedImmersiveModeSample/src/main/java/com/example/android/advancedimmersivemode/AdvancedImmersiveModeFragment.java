@@ -85,6 +85,8 @@ public class AdvancedImmersiveModeFragment extends Fragment {
                 flagsView.setSystemUiVisibility(uiOptions);
                 // END_INCLUDE(immersive_presets)
 
+                dumpFlagStateToLog(uiOptions);
+
                 // The below code just updates the checkboxes to reflect which flags have been set.
                 mLowProfileCheckBox.setChecked(false);
                 mHideNavCheckbox.setChecked(true);
@@ -112,13 +114,14 @@ public class AdvancedImmersiveModeFragment extends Fragment {
                 flagsView.setSystemUiVisibility(uiOptions);
                 // END_INCLUDE(leanback_presets)
 
+                dumpFlagStateToLog(uiOptions);
+
                 // The below code just updates the checkboxes to reflect which flags have been set.
                 mLowProfileCheckBox.setChecked(false);
                 mHideNavCheckbox.setChecked(true);
                 mHideStatusBarCheckBox.setChecked(true);
                 mImmersiveModeCheckBox.setChecked(false);
                 mImmersiveModeStickyCheckBox.setChecked(false);
-                toggleUiFlags();
             }
         });
 
@@ -132,6 +135,42 @@ public class AdvancedImmersiveModeFragment extends Fragment {
         flagsView.setSystemUiVisibility(uiOptions);
 
         return flagsView;
+    }
+
+    /**
+     * Helper method to dump flag state to the log.
+     * @param uiFlags Set of UI flags to inspect
+     */
+    public void dumpFlagStateToLog(int uiFlags) {
+        if ((uiFlags & View.SYSTEM_UI_FLAG_LOW_PROFILE) != 0) {
+            Log.i(TAG, "SYSTEM_UI_FLAG_LOW_PROFILE is set");
+        } else {
+            Log.i(TAG, "SYSTEM_UI_FLAG_LOW_PROFILE is unset");
+        }
+
+        if ((uiFlags & View.SYSTEM_UI_FLAG_FULLSCREEN) != 0) {
+            Log.i(TAG, "SYSTEM_UI_FLAG_FULLSCREEN is set");
+        } else {
+            Log.i(TAG, "SYSTEM_UI_FLAG_FULLSCREEN is unset");
+        }
+
+        if ((uiFlags & View.SYSTEM_UI_FLAG_HIDE_NAVIGATION) != 0) {
+            Log.i(TAG, "SYSTEM_UI_FLAG_HIDE_NAVIGATION is set");
+        } else {
+            Log.i(TAG, "SYSTEM_UI_FLAG_HIDE_NAVIGATION is unset");
+        }
+
+        if ((uiFlags & View.SYSTEM_UI_FLAG_IMMERSIVE) != 0) {
+            Log.i(TAG, "SYSTEM_UI_FLAG_IMMERSIVE is set");
+        } else {
+            Log.i(TAG, "SYSTEM_UI_FLAG_IMMERSIVE is unset");
+        }
+
+        if ((uiFlags & View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) != 0) {
+            Log.i(TAG, "SYSTEM_UI_FLAG_IMMERSIVE_STICKY is set");
+        } else {
+            Log.i(TAG, "SYSTEM_UI_FLAG_IMMERSIVE_STICKY is unset");
+        }
     }
 
     /**
@@ -217,7 +256,8 @@ public class AdvancedImmersiveModeFragment extends Fragment {
         // BEGIN_INCLUDE (set_ui_flags)
         //Set the new UI flags.
         decorView.setSystemUiVisibility(newUiOptions);
-        Log.i(TAG, "Current height: " + decorView.getHeight() + ", width: " + decorView.getWidth());
         // END_INCLUDE (set_ui_flags)
+
+        dumpFlagStateToLog(uiOptions);
     }
 }
