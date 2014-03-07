@@ -23,7 +23,6 @@ List<String> samples = [
 "ui/actionbarcompat/ActionBarCompat-Styled",
 "ui/actionbarcompat/ActionBarCompat-ListPopupMenu",
 "ui/actionbarcompat/ActionBarCompat-ShareActionProvider",
-"ui/actionbarcompat/ActionBarCompat-Basic",
 "ui/notifications/BasicNotifications",
 "ui/notifications/CustomNotifications",
 "ui/actionbar/DoneBar",
@@ -31,14 +30,20 @@ List<String> samples = [
 "ui/window/AdvancedImmersiveMode",
 "ui/window/ImmersiveMode",
 "background/alarms/RepeatingAlarm",
-"renderScript/BasicRenderScript",
-"renderScript/RenderScriptIntrinsic",
+//"renderScript/BasicRenderScript",
+//"renderScript/RenderScriptIntrinsic",
+//"sensors/BatchStepSensor"
 "ui/views/SlidingTabs/SlidingTabsBasic",
 "ui/views/SlidingTabs/SlidingTabsColors",
 "connectivity/nfc/CardEmulation",
 "connectivity/nfc/CardReader",
 "sensors/BatchStepSensor"
 
+"ui/graphics/DisplayingBitmaps",
+"ui/transition/AdapterTransition",
+"ui/transition/BasicTransition",
+"media/MediaRouter"
+>>>>>>> 16747963
 ]
 
 List<String> taskNames = [
