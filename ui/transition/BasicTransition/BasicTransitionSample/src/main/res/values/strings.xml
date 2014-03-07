@@ -22,6 +22,6 @@
     <string name="scene_3">3</string>
     <string name="scene_4">4</string>
     <string name="hello">Hello!</string>
-    <string name="this_is_scene_3">This is scene #3.</string>
+    <string name="additional_message">This text fades in and out.</string>
 
 </resources>
