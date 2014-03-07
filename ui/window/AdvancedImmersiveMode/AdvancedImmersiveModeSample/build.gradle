@@ -1,3 +1,6 @@
+
+
+
 buildscript {
     repositories {
         mavenCentral()
@@ -26,6 +29,7 @@ List<String> dirs = [
 
 android {
     compileSdkVersion 19
+
     buildToolsVersion "19.0.1"
 
     sourceSets {
@@ -37,7 +41,6 @@ android {
         }
         instrumentTest.setRoot('tests')
         instrumentTest.java.srcDirs = ['tests/src']
-
     }
 }
 // BEGIN_EXCLUDE
