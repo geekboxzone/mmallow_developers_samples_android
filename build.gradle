@@ -20,6 +20,7 @@ List<String> samples = [
 "ui/lists/CustomChoiceList",
 "ui/views/TextSwitcher",
 "ui/views/HorizontalPaging",
+"ui/actionbarcompat/Basic",
 "ui/actionbarcompat/ActionBarCompat-Styled",
 "ui/actionbarcompat/ActionBarCompat-ListPopupMenu",
 "ui/actionbarcompat/ActionBarCompat-ShareActionProvider",
