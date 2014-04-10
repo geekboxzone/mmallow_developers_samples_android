@@ -16,6 +16,8 @@
 
 package com.example.android.fragmenttransition;
 
+import com.example.android.common.logger.Log;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -31,6 +33,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailFragment extends Fragment implements Animation.AnimationListener {
+
+    private static final String TAG = "DetailFragment";
 
     private static final String ARG_RESOURCE_ID = "resource_id";
     private static final String ARG_TITLE = "title";
@@ -138,6 +142,7 @@ public class DetailFragment extends Fragment implements Animation.AnimationListe
     public void onAnimationEnd(Animation animation) {
         // This method is called at the end of the animation for the fragment transaction,
         // which is perfect time to start our Transition.
+        Log.i(TAG, "Fragment animation ended. Starting a Transition.");
         final Scene scene = Scene.getSceneForLayout((ViewGroup) getView(),
                 R.layout.fragment_detail_content, getActivity());
         TransitionManager.go(scene);
