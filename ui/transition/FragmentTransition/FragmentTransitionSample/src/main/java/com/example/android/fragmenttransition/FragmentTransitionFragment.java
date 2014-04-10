@@ -16,6 +16,8 @@
 
 package com.example.android.fragmenttransition;
 
+import com.example.android.common.logger.Log;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,6 +29,8 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 public class FragmentTransitionFragment extends Fragment implements AdapterView.OnItemClickListener {
+
+    private static final String TAG = "FragmentTransitionFragment";
 
     private MeatAdapter mAdapter;
 
@@ -55,6 +59,7 @@ public class FragmentTransitionFragment extends Fragment implements AdapterView.
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Meat meat = mAdapter.getItem(position);
+        Log.i(TAG, meat.title + " clicked. Replacing fragment.");
         // We start the fragment transaction here. It is just an ordinary fragment transaction.
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
