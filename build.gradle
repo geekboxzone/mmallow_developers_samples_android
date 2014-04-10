@@ -20,7 +20,7 @@ List<String> samples = [
 "ui/lists/CustomChoiceList",
 "ui/views/TextSwitcher",
 "ui/views/HorizontalPaging",
-"ui/actionbarcompat/Basic",
+"ui/actionbarcompat/ActionBarCompat-Basic",
 "ui/actionbarcompat/ActionBarCompat-Styled",
 "ui/actionbarcompat/ActionBarCompat-ListPopupMenu",
 "ui/actionbarcompat/ActionBarCompat-ShareActionProvider",
@@ -31,20 +31,22 @@ List<String> samples = [
 "ui/window/AdvancedImmersiveMode",
 "ui/window/ImmersiveMode",
 "background/alarms/RepeatingAlarm",
-//"renderScript/BasicRenderScript",
-//"renderScript/RenderScriptIntrinsic",
-//"sensors/BatchStepSensor"
+"renderScript/BasicRenderScript",
+"renderScript/RenderScriptIntrinsic",
 "ui/views/SlidingTabs/SlidingTabsBasic",
 "ui/views/SlidingTabs/SlidingTabsColors",
 "connectivity/nfc/CardEmulation",
 "connectivity/nfc/CardReader",
-"sensors/BatchStepSensor"
-
+"sensors/BatchStepSensor",
 "ui/graphics/DisplayingBitmaps",
 "ui/transition/AdapterTransition",
 "ui/transition/BasicTransition",
+"ui/transition/CustomTransition",
+"ui/transition/FragmentTransition",
+"ui/views/SwipeRefreshLayout/SwipeRefreshLayoutBasic",
+"ui/views/SwipeRefreshLayout/SwipeRefreshListFragment",
+"ui/views/SwipeRefreshLayout/SwipeRefreshMultipleViews",
 "media/MediaRouter"
->>>>>>> 16747963
 ]
 
 List<String> taskNames = [
