@@ -15,4 +15,5 @@
 -->
 <resources>
     <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
 </resources>
