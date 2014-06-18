@@ -17,6 +17,7 @@
 package com.example.android.camera2basic;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -183,6 +184,7 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
         mTextureView.setSurfaceTextureListener(mSurfaceTextureListener);
         view.findViewById(R.id.picture).setOnClickListener(this);
+        view.findViewById(R.id.info).setOnClickListener(this);
     }
 
     @Override
@@ -262,21 +264,22 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
             mCameraDevice.createCaptureSession(Arrays.asList(surface),
                     new CameraCaptureSession.StateListener() {
 
-                @Override
-                public void onConfigured(CameraCaptureSession cameraCaptureSession) {
-                    // When the session is ready, we start displaying the preview.
-                    mPreviewSession = cameraCaptureSession;
-                    updatePreview();
-                }
+                        @Override
+                        public void onConfigured(CameraCaptureSession cameraCaptureSession) {
+                            // When the session is ready, we start displaying the preview.
+                            mPreviewSession = cameraCaptureSession;
+                            updatePreview();
+                        }
 
-                @Override
-                public void onConfigureFailed(CameraCaptureSession cameraCaptureSession) {
-                    Activity activity = getActivity();
-                    if (null != activity) {
-                        Toast.makeText(activity, "Failed", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }, null);
+                        @Override
+                        public void onConfigureFailed(CameraCaptureSession cameraCaptureSession) {
+                            Activity activity = getActivity();
+                            if (null != activity) {
+                                Toast.makeText(activity, "Failed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }, null
+            );
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
@@ -454,20 +457,23 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
                     };
 
             // Finally, we can start a new CameraCaptureSession to take a picture.
-            mCameraDevice.createCaptureSession(outputSurfaces, new CameraCaptureSession.StateListener() {
-                @Override
-                public void onConfigured(CameraCaptureSession session) {
-                    try {
-                        session.capture(captureBuilder.build(), captureListener, backgroundHandler);
-                    } catch (CameraAccessException e) {
-                        e.printStackTrace();
-                    }
-                }
+            mCameraDevice.createCaptureSession(outputSurfaces,
+                    new CameraCaptureSession.StateListener() {
+                        @Override
+                        public void onConfigured(CameraCaptureSession session) {
+                            try {
+                                session.capture(captureBuilder.build(), captureListener,
+                                        backgroundHandler);
+                            } catch (CameraAccessException e) {
+                                e.printStackTrace();
+                            }
+                        }
 
-                @Override
-                public void onConfigureFailed(CameraCaptureSession session) {
-                }
-            }, backgroundHandler);
+                        @Override
+                        public void onConfigureFailed(CameraCaptureSession session) {
+                        }
+                    }, backgroundHandler
+            );
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
@@ -478,6 +484,16 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
         switch (view.getId()) {
             case R.id.picture: {
                 takePicture();
+                break;
+            }
+            case R.id.info: {
+                Activity activity = getActivity();
+                if (null != activity) {
+                    new AlertDialog.Builder(activity)
+                            .setMessage(R.string.intro_message)
+                            .setPositiveButton(android.R.string.ok, null)
+                            .show();
+                }
                 break;
             }
         }
