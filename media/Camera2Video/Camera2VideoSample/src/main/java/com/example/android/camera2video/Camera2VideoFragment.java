@@ -17,6 +17,7 @@
 package com.example.android.camera2video;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -192,6 +193,7 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
         mTextureView.setSurfaceTextureListener(mSurfaceTextureListener);
         mButtonVideo = (Button) view.findViewById(R.id.video);
         mButtonVideo.setOnClickListener(this);
+        view.findViewById(R.id.info).setOnClickListener(this);
     }
 
     @Override
@@ -217,6 +219,16 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
                     stopRecordingVideo();
                 } else {
                     startRecordingVideo();
+                }
+                break;
+            }
+            case R.id.info: {
+                Activity activity = getActivity();
+                if (null != activity) {
+                    new AlertDialog.Builder(activity)
+                            .setMessage(R.string.intro_message)
+                            .setPositiveButton(android.R.string.ok, null)
+                            .show();
                 }
                 break;
             }
@@ -348,7 +360,7 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
             return;
         }
         mMediaRecorder = new MediaRecorder();
-        final File file = new File(activity.getExternalFilesDir(null), "video.mp4");
+        final File file = getVideoFile(activity);
         try {
             // UI
             mButtonVideo.setText(R.string.stop);
@@ -402,6 +414,10 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
         }
     }
 
+    private File getVideoFile(Context context) {
+        return new File(context.getExternalFilesDir(null), "video.mp4");
+    }
+
     private void stopRecordingVideo() {
         // UI
         mIsRecordingVideo = false;
@@ -410,6 +426,11 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
         mMediaRecorder.stop();
         mMediaRecorder.release();
         mMediaRecorder = null;
+        Activity activity = getActivity();
+        if (null != activity) {
+            Toast.makeText(activity, "Video saved: " + getVideoFile(activity),
+                    Toast.LENGTH_SHORT).show();
+        }
         startPreview();
     }
 
