@@ -7,23 +7,17 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.8.+'
+        classpath 'com.android.tools.build:gradle:0.11.+'
     }
 }
 
 apply plugin: 'android'
 
+
 dependencies {
-<<<<<<< HEAD
-    // Add the support lib that is appropriate for SDK 4
-    compile "com.android.support:support-v4:19.0.+"
-=======
-
-  // Add the support lib that is appropriate for SDK 4
-    compile "com.android.support:support-v4:19.0.+"
 
 
->>>>>>> 16747963
+
 }
 
 // The sample build uses multiple directories to
@@ -36,11 +30,8 @@ List<String> dirs = [
 
 android {
     compileSdkVersion 19
-<<<<<<< HEAD
-=======
 
->>>>>>> 16747963
-    buildToolsVersion "19.0.1"
+    buildToolsVersion "19.1.0"
 
     sourceSets {
         main {
@@ -49,8 +40,9 @@ android {
                 res.srcDirs "src/${dir}/res"
             }
         }
-        instrumentTest.setRoot('tests')
-        instrumentTest.java.srcDirs = ['tests/src']
+        androidTest.setRoot('tests')
+        androidTest.java.srcDirs = ['tests/src']
+
     }
 }
 // BEGIN_EXCLUDE
