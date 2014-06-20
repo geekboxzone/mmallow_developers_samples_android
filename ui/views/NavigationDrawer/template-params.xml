@@ -31,7 +31,7 @@
 
     <dependency>com.android.support:support-v13:20.+</dependency>
     <dependency>com.android.support:appcompat-v7:20.+</dependency>
-    <dependency>com.android.support:recyclerview-v7:20.+</dependency>
+    <dependency>com.android.support:recyclerview-v7:+</dependency>
 
     <strings>
         <intro>
