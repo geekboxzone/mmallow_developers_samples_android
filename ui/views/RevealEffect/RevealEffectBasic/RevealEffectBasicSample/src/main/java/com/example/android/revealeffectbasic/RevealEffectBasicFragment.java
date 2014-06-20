@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
@@ -53,7 +54,8 @@ public class RevealEffectBasicFragment extends Fragment {
                     View shape = rootView.findViewById(R.id.circle);
                     /* Create a reveal {@Link ValueAnimator} that starts clipping the view from
                     * the top left corner until the whole view is covered. */
-                    ValueAnimator animator = shape.createRevealAnimator(
+                    ValueAnimator animator = ViewAnimationUtils.createCircularReveal(
+                            shape,
                             0,
                             0,
                             0,
