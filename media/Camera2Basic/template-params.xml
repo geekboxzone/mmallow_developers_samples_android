@@ -21,7 +21,7 @@
     <name>Camera2Basic</name>
     <group>Media</group>
     <package>com.example.android.camera2basic</package>
-    <minSdk>20</minSdk>
+    <minSdk>L</minSdk>
     <compileSdkVersion>"android-L"</compileSdkVersion>
     <strings>
         <intro>

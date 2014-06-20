@@ -22,7 +22,7 @@
     <group>UI</group>
     <package>com.example.android.activityscenetransitionbasic</package>
 
-    <minSdk>20</minSdk>
+    <minSdk>L</minSdk>
     <compileSdkVersion>"android-L"</compileSdkVersion>
 
     <dependency_external>'libs/volley.jar'</dependency_external>
