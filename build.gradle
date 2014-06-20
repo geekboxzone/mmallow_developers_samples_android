@@ -46,7 +46,16 @@ List<String> samples = [
 "ui/views/SwipeRefreshLayout/SwipeRefreshLayoutBasic",
 "ui/views/SwipeRefreshLayout/SwipeRefreshListFragment",
 "ui/views/SwipeRefreshLayout/SwipeRefreshMultipleViews",
-"media/MediaRouter"
+"media/MediaRouter",
+"admin/BasicManagedProfile",
+"media/Camera2Basic",
+"media/Camera2Video",
+"ui/activityscenetransition/ActivitySceneTransitionBasic",
+"ui/views/NavigationDrawer",
+"ui/views/Elevation/ElevationBasic",
+"ui/views/Elevation/ElevationDrag",
+"ui/views/Clipping/ClippingBasic",
+"background/JobScheduler",
 ]
 
 List<String> taskNames = [
