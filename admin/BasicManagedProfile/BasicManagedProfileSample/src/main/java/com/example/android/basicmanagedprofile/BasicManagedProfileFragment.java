@@ -35,8 +35,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.app.admin.DevicePolicyManager.FLAG_TO_MANAGED_PROFILE;
-import static android.app.admin.DevicePolicyManager.FLAG_TO_PRIMARY_USER;
+import static android.app.admin.DevicePolicyManager.FLAG_MANAGED_CAN_ACCESS_PARENT;
+import static android.app.admin.DevicePolicyManager.FLAG_PARENT_CAN_ACCESS_MANAGED;
 
 /**
  * Provides several functions that are available in a managed profile. This includes
@@ -251,9 +251,10 @@ public class BasicManagedProfileFragment extends Fragment
             filter.addDataType("text/plain");
             filter.addDataType("image/jpeg");
             // This is how you can register an IntentFilter as allowed pattern of Intent forwarding
-            manager.addForwardingIntentFilter(BasicDeviceAdminReceiver.getComponentName(activity),
-                                              filter,
-                                              FLAG_TO_PRIMARY_USER | FLAG_TO_MANAGED_PROFILE);
+            manager.addCrossProfileIntentFilter(BasicDeviceAdminReceiver.getComponentName(activity),
+                                                filter,
+                                                FLAG_MANAGED_CAN_ACCESS_PARENT |
+                                                FLAG_PARENT_CAN_ACCESS_MANAGED);
         } catch (IntentFilter.MalformedMimeTypeException e) {
             e.printStackTrace();
         }
@@ -269,7 +270,7 @@ public class BasicManagedProfileFragment extends Fragment
         }
         DevicePolicyManager manager =
             (DevicePolicyManager) activity.getSystemService(Context.DEVICE_POLICY_SERVICE);
-        manager.clearForwardingIntentFilters(BasicDeviceAdminReceiver.getComponentName(activity));
+        manager.clearCrossProfileIntentFilters(BasicDeviceAdminReceiver.getComponentName(activity));
     }
 
     /**
