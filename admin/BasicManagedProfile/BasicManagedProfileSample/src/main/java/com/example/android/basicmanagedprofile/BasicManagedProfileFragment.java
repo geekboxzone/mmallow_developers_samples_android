@@ -88,12 +88,12 @@ public class BasicManagedProfileFragment extends Fragment
         DevicePolicyManager manager =
             (DevicePolicyManager) activity.getSystemService(Context.DEVICE_POLICY_SERVICE);
         // Retrieves whether the calculator app is enabled in this profile
-        mCalculatorEnabled = !manager.isApplicationBlocked(
-            BasicDeviceAdminReceiver.getComponentName(activity), PACKAGE_NAMES_CALCULATOR[0]);
+        mCalculatorEnabled = !manager.isApplicationHidden(
+                BasicDeviceAdminReceiver.getComponentName(activity), PACKAGE_NAMES_CALCULATOR[0]);
         // Retrieves whether Chrome is enabled in this profile
         mChromeEnabled = false;
         for (String packageName : PACKAGE_NAMES_CHROME) {
-            if (!manager.isApplicationBlocked(
+            if (!manager.isApplicationHidden(
                     BasicDeviceAdminReceiver.getComponentName(activity), packageName)) {
                 mChromeEnabled = true;
                 return;
@@ -176,8 +176,8 @@ public class BasicManagedProfileFragment extends Fragment
             (DevicePolicyManager) activity.getSystemService(Context.DEVICE_POLICY_SERVICE);
         for (String packageName : packageNames) {
             // This is how you can enable or disable an app in a managed profile.
-            manager.setApplicationBlocked(BasicDeviceAdminReceiver.getComponentName(activity),
-                                          packageName, !enabled);
+            manager.setApplicationHidden(BasicDeviceAdminReceiver.getComponentName(activity),
+                    packageName, !enabled);
         }
         Toast.makeText(activity, enabled ? "Enabled" : "Disabled", Toast.LENGTH_SHORT).show();
     }
