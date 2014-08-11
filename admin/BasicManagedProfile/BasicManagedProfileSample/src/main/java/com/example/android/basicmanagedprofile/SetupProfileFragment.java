@@ -35,6 +35,8 @@ import static android.app.admin.DevicePolicyManager.EXTRA_PROVISIONING_DEVICE_AD
  */
 public class SetupProfileFragment extends Fragment implements View.OnClickListener {
 
+    private static final int REQUEST_PROVISION_MANAGED_PROFILE = 1;
+
     public static SetupProfileFragment newInstance() {
         return new SetupProfileFragment();
     }
@@ -79,12 +81,25 @@ public class SetupProfileFragment extends Fragment implements View.OnClickListen
                         "Sample Managed Profile");
         intent.putExtra(EXTRA_DEVICE_ADMIN, BasicDeviceAdminReceiver.getComponentName(activity));
         if (intent.resolveActivity(activity.getPackageManager()) != null) {
-            startActivity(intent);
+            startActivityForResult(intent, REQUEST_PROVISION_MANAGED_PROFILE);
             activity.finish();
         } else {
             Toast.makeText(activity, "Device provisioning is not enabled. Stopping.",
                            Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_PROVISION_MANAGED_PROFILE) {
+            if (resultCode == Activity.RESULT_OK) {
+                Toast.makeText(getActivity(), "Provisioning done.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getActivity(), "Provisioning failed.", Toast.LENGTH_SHORT).show();
+            }
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
 }
