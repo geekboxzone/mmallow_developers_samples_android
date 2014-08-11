@@ -46,6 +46,7 @@ List<String> samples = [
 "ui/views/SwipeRefreshLayout/SwipeRefreshLayoutBasic",
 "ui/views/SwipeRefreshLayout/SwipeRefreshListFragment",
 "ui/views/SwipeRefreshLayout/SwipeRefreshMultipleViews",
+"wearable/wear/SynchronizedNotifications",
 "media/MediaRouter"
 ]
 
