@@ -18,28 +18,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true">
-
-        <View
-                android:id="@+id/circle"
-                android:layout_width="@dimen/shape_size"
-                android:layout_height="@dimen/shape_size"
-                android:layout_marginLeft="0dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@color/color_2"/>
-    </FrameLayout>
-
+    <View
+            android:id="@+id/circle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/color_2"
+            android:layout_above="@+id/button"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"/>
     <Button
+            android:id="@+id/button"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
             android:text="Reveal"
-            android:id="@+id/button"
-            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="60dp"/>
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentBottom="true"
+            />
+
 </RelativeLayout>
