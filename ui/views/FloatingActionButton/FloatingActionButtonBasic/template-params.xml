@@ -19,7 +19,7 @@
 
 <sample>
     <name>FloatingActionButtonBasic</name>
-    <group>NoGroup</group>
+    <group>UI</group>
     <package>com.example.android.floatingactionbuttonbasic</package>
 
 

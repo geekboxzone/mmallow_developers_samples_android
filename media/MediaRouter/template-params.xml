@@ -19,16 +19,16 @@
 
 <sample>
     <name>MediaRouter</name>
-    <group>NoGroup</group>
+    <group>Media</group>
     <package>com.example.android.mediarouter</package>
 
 
 
     <!-- change minSdk if needed-->
-    <minSdk>4</minSdk>
+    <minSdk>13</minSdk>
 
-    <dependency>com.android.support:appcompat-v7:+</dependency>
-    <dependency>com.android.support:mediarouter-v7:+</dependency>
+    <dependency>com.android.support:appcompat-v7:20.+</dependency>
+    <dependency>com.android.support:mediarouter-v7:20.+</dependency>
 
 
     <strings>

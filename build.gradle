@@ -27,6 +27,7 @@ List<String> samples = [
 "ui/notifications/BasicNotifications",
 "ui/notifications/CustomNotifications",
 "ui/actionbar/DoneBar",
+"ui/graphics/PdfRendererBasic",
 "ui/window/BasicImmersiveMode",
 "ui/window/AdvancedImmersiveMode",
 "ui/window/ImmersiveMode",
@@ -55,6 +56,8 @@ List<String> samples = [
 "ui/views/Elevation/ElevationBasic",
 "ui/views/Elevation/ElevationDrag",
 "ui/views/Clipping/ClippingBasic",
+"ui/views/FloatingActionButton/FloatingActionButtonBasic",
+"ui/views/RevealEffect/RevealEffectBasic",
 "background/JobScheduler",
 ]
 
