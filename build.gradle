@@ -59,6 +59,7 @@ List<String> samples = [
 "ui/views/FloatingActionButton/FloatingActionButtonBasic",
 "ui/views/RevealEffect/RevealEffectBasic",
 "background/JobScheduler",
+"wearable/wear/SynchronizedNotifications"
 ]
 
 List<String> taskNames = [
