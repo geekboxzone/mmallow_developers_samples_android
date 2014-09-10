@@ -27,7 +27,6 @@ import android.widget.Toast;
 
 import static android.app.admin.DevicePolicyManager.ACTION_PROVISION_MANAGED_PROFILE;
 import static android.app.admin.DevicePolicyManager.EXTRA_DEVICE_ADMIN;
-import static android.app.admin.DevicePolicyManager.EXTRA_PROVISIONING_DEFAULT_MANAGED_PROFILE_NAME;
 import static android.app.admin.DevicePolicyManager.EXTRA_PROVISIONING_DEVICE_ADMIN_PACKAGE_NAME;
 
 /**
@@ -77,8 +76,6 @@ public class SetupProfileFragment extends Fragment implements View.OnClickListen
         Intent intent = new Intent(ACTION_PROVISION_MANAGED_PROFILE);
         intent.putExtra(EXTRA_PROVISIONING_DEVICE_ADMIN_PACKAGE_NAME,
                         activity.getApplicationContext().getPackageName());
-        intent.putExtra(EXTRA_PROVISIONING_DEFAULT_MANAGED_PROFILE_NAME,
-                        "Sample Managed Profile");
         intent.putExtra(EXTRA_DEVICE_ADMIN, BasicDeviceAdminReceiver.getComponentName(activity));
         if (intent.resolveActivity(activity.getPackageManager()) != null) {
             startActivityForResult(intent, REQUEST_PROVISION_MANAGED_PROFILE);
