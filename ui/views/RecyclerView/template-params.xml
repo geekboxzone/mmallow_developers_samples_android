@@ -31,7 +31,7 @@
     <strings>
         <intro>
             <![CDATA[
-            RecyclerView laid out by LinearLayoutManager.
+            Demonstration of using RecyclerView with a LayoutManager to create a vertical ListView.
             ]]>
         </intro>
     </strings>
