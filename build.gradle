@@ -47,6 +47,7 @@ List<String> samples = [
 "ui/views/SwipeRefreshLayout/SwipeRefreshLayoutBasic",
 "ui/views/SwipeRefreshLayout/SwipeRefreshListFragment",
 "ui/views/SwipeRefreshLayout/SwipeRefreshMultipleViews",
+<<<<<<< HEAD
 "media/MediaRouter",
 "admin/BasicManagedProfile",
 "media/Camera2Basic",
@@ -59,6 +60,8 @@ List<String> samples = [
 "ui/views/FloatingActionButton/FloatingActionButtonBasic",
 "ui/views/RevealEffect/RevealEffectBasic",
 "background/JobScheduler",
+"wearable/wear/SynchronizedNotifications",
+"media/MediaRouter"
 ]
 
 List<String> taskNames = [
