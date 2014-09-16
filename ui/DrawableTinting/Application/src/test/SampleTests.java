@@ -13,19 +13,19 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.example.android.drawabletinting.test;
+package android.ui.DrawableTinting.Application.src.test;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+import android.ui.DrawableTinting.Application.src.main.java.com.example.android.drawabletinting.DrawableTintingFragment;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 
-import com.example.android.drawabletinting.DrawableTintingFragment;
 import com.example.android.drawabletinting.MainActivity;
 import com.example.android.drawabletinting.R;
 

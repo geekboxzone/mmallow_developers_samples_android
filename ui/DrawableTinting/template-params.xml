@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
  Copyright 2014 The Android Open Source Project
-
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
@@ -14,15 +13,12 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
 <sample>
     <name>DrawableTinting</name>
     <group>UI</group>
     <package>com.example.android.drawabletinting</package>
-
     <!-- change minSdk if needed-->
     <minSdk>L</minSdk>
-
     <strings>
         <intro>
             <![CDATA[
@@ -37,11 +33,8 @@
             ]]>
         </intro>
     </strings>
-
     <template src="base"/>
     <template src="FragmentView"/>
-
     <common src="logger"/>
     <common src="activities"/>
-
 </sample>
