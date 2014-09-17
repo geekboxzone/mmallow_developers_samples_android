@@ -29,5 +29,6 @@
     <string name="toggle_chrome">Chrome in this profile:</string>
     <string name="set_chrome_restrictions">Set Chrome restrictions</string>
     <string name="icon">Icon</string>
+    <string name="profile_name">Sample Managed Profile</string>
 
 </resources>

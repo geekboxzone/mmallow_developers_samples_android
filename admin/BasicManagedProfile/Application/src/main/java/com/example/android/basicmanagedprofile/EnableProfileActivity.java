@@ -48,7 +48,7 @@ public class EnableProfileActivity extends Activity implements View.OnClickListe
             (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
         ComponentName componentName = BasicDeviceAdminReceiver.getComponentName(this);
         // This is the name for the newly created managed profile.
-        manager.setProfileName(componentName, "Sample Managed Profile");
+        manager.setProfileName(componentName, getString(R.string.profile_name));
         // We enable the profile here.
         manager.setProfileEnabled(componentName);
     }
