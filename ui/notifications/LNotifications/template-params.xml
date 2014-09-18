@@ -18,7 +18,7 @@
 
 
 <sample>
-    <name>LNotifications(Heads-Up, Visibility, Person, Category, Priority)</name>
+    <name>LNotifications Sample</name>
     <group>UI</group>
     <package>com.example.android.lnotifications</package>
 
