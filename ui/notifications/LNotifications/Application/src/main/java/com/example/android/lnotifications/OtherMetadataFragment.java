@@ -180,6 +180,7 @@ public class OtherMetadataFragment extends Fragment {
     //@VisibleForTesting
     Notification createNotification(Priority priority, Category category, Uri contactUri) {
         Notification.Builder notificationBuilder = new Notification.Builder(getActivity())
+                .setContentTitle("Notification with other metadata")
                 .setSmallIcon(R.drawable.ic_launcher_notification)
                 .setPriority(priority.value)
                 .setCategory(category.value)
@@ -319,7 +320,7 @@ public class OtherMetadataFragment extends Fragment {
 
         @Override
         public String toString() {
-            return "Category : " + value;
+            return value;
         }
     }
 
@@ -339,11 +340,6 @@ public class OtherMetadataFragment extends Fragment {
 
         Priority(int value) {
             this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return "Priority : " + name();
         }
     }
 }

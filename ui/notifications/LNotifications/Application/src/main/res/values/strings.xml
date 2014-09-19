@@ -38,4 +38,6 @@ limitations under the License.
     <string name="click_to_change">Click to Change</string>
     <string name="show_notification">Show notification</string>
     <string name="use_heads_up_notification_where_possible">Use Heads Up Notification when possible</string>
+    <string name="label_category">Category</string>
+    <string name="label_priority">Priority</string>
 </resources>
