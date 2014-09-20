@@ -47,7 +47,9 @@ List<String> samples = [
 "ui/views/SwipeRefreshLayout/SwipeRefreshListFragment",
 "ui/views/SwipeRefreshLayout/SwipeRefreshMultipleViews",
 "wearable/wear/SynchronizedNotifications",
-"media/MediaRouter"
+"media/MediaRouter",
+"media/MediaEffects",
+"connectivity/bluetooth/BluetoothChat",
 ]
 
 List<String> taskNames = [
