@@ -13,6 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <string name="app_name">Shared</string>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Android Wear AgendaData Example Application</string>
+    <string name="delete">Delete</string>
+    <string name="desc_all_day">%s(All day)</string>
+    <string name="desc_time_period">%1$s(%2$s - %3$s)</string>
+    <string name="delete_successful">Event deleted</string>
+    <string name="delete_unsuccessful">Unable to delete event</string>
 </resources>
