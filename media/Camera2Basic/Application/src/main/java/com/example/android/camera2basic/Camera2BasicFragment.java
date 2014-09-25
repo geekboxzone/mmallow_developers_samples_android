@@ -160,9 +160,9 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
     private Size mPreviewSize;
 
     /**
-     * {@link CameraDevice.StateListener} is called when {@link CameraDevice} changes its state.
+     * {@link CameraDevice.StateCallback} is called when {@link CameraDevice} changes its state.
      */
-    private final CameraDevice.StateListener mStateListener = new CameraDevice.StateListener() {
+    private final CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallback() {
 
         @Override
         public void onOpened(CameraDevice cameraDevice) {
@@ -236,15 +236,15 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
     /**
      * The current state of camera state for taking pictures.
      *
-     * @see #mCaptureListener
+     * @see #mCaptureCallback
      */
     private int mState = STATE_PREVIEW;
 
     /**
-     * A {@link CameraCaptureSession.CaptureListener} that handles events related to JPEG capture.
+     * A {@link CameraCaptureSession.CaptureCallback} that handles events related to JPEG capture.
      */
-    private CameraCaptureSession.CaptureListener mCaptureListener
-            = new CameraCaptureSession.CaptureListener() {
+    private CameraCaptureSession.CaptureCallback mCaptureCallback
+            = new CameraCaptureSession.CaptureCallback() {
 
         private void process(CaptureResult result) {
             switch (mState) {
@@ -449,7 +449,7 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
         Activity activity = getActivity();
         CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
         try {
-            manager.openCamera(mCameraId, mStateListener, mBackgroundHandler);
+            manager.openCamera(mCameraId, mStateCallback, mBackgroundHandler);
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
@@ -517,7 +517,7 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
 
             // Here, we create a CameraCaptureSession for camera preview.
             mCameraDevice.createCaptureSession(Arrays.asList(surface, mImageReader.getSurface()),
-                    new CameraCaptureSession.StateListener() {
+                    new CameraCaptureSession.StateCallback() {
 
                         @Override
                         public void onConfigured(CameraCaptureSession cameraCaptureSession) {
@@ -534,7 +534,7 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
                                 // Finally, we start displaying the camera preview.
                                 mPreviewRequest = mPreviewRequestBuilder.build();
                                 mCaptureSession.setRepeatingRequest(mPreviewRequest,
-                                        mCaptureListener, mBackgroundHandler);
+                                        mCaptureCallback, mBackgroundHandler);
                             } catch (CameraAccessException e) {
                                 e.printStackTrace();
                             }
@@ -600,9 +600,9 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
             // This is how to tell the camera to lock focus.
             mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_TRIGGER,
                     CameraMetadata.CONTROL_AF_TRIGGER_START);
-            // Tell #mCaptureListener to wait for the lock.
+            // Tell #mCaptureCallback to wait for the lock.
             mState = STATE_WAITING_LOCK;
-            mCaptureSession.setRepeatingRequest(mPreviewRequestBuilder.build(), mCaptureListener,
+            mCaptureSession.setRepeatingRequest(mPreviewRequestBuilder.build(), mCaptureCallback,
                     mBackgroundHandler);
         } catch (CameraAccessException e) {
             e.printStackTrace();
@@ -611,16 +611,16 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
 
     /**
      * Run the precapture sequence for capturing a still image. This method should be called when we
-     * get a response in {@link #mCaptureListener} from {@link #lockFocus()}.
+     * get a response in {@link #mCaptureCallback} from {@link #lockFocus()}.
      */
     private void runPrecaptureSequence() {
         try {
             // This is how to tell the camera to trigger.
             mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER,
                     CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER_START);
-            // Tell #mCaptureListener to wait for the precapture sequence to be set.
+            // Tell #mCaptureCallback to wait for the precapture sequence to be set.
             mState = STATE_WAITING_PRECAPTURE;
-            mCaptureSession.capture(mPreviewRequestBuilder.build(), mCaptureListener,
+            mCaptureSession.capture(mPreviewRequestBuilder.build(), mCaptureCallback,
                     mBackgroundHandler);
         } catch (CameraAccessException e) {
             e.printStackTrace();
@@ -629,7 +629,7 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
 
     /**
      * Capture a still picture. This method should be called when we get a response in
-     * {@link #mCaptureListener} from both {@link #lockFocus()}.
+     * {@link #mCaptureCallback} from both {@link #lockFocus()}.
      */
     private void captureStillPicture() {
         try {
@@ -652,8 +652,8 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
             int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, ORIENTATIONS.get(rotation));
 
-            CameraCaptureSession.CaptureListener captureListener
-                    = new CameraCaptureSession.CaptureListener() {
+            CameraCaptureSession.CaptureCallback CaptureCallback
+                    = new CameraCaptureSession.CaptureCallback() {
 
                 @Override
                 public void onCaptureCompleted(CameraCaptureSession session, CaptureRequest request,
@@ -664,7 +664,7 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
             };
 
             mCaptureSession.stopRepeating();
-            mCaptureSession.capture(captureBuilder.build(), captureListener, null);
+            mCaptureSession.capture(captureBuilder.build(), CaptureCallback, null);
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
@@ -680,11 +680,11 @@ public class Camera2BasicFragment extends Fragment implements View.OnClickListen
                     CameraMetadata.CONTROL_AF_TRIGGER_CANCEL);
             mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
                     CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
-            mCaptureSession.capture(mPreviewRequestBuilder.build(), mCaptureListener,
+            mCaptureSession.capture(mPreviewRequestBuilder.build(), mCaptureCallback,
                     mBackgroundHandler);
             // After this, the camera will go back to the normal state of preview.
             mState = STATE_PREVIEW;
-            mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureListener,
+            mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureCallback,
                     mBackgroundHandler);
         } catch (CameraAccessException e) {
             e.printStackTrace();
