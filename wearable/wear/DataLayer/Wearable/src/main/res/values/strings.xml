@@ -13,6 +13,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <string name="app_name">Shared</string>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Data Layer Sample Wearable App</string>
+    <string name="intro">Waiting for data to arrive\u2026</string>
 </resources>
