@@ -13,6 +13,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources>
-    <string name="app_name">Shared</string>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 </resources>
