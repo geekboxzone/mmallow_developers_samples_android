@@ -13,6 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <string name="app_name">Shared</string>
-</resources>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_stop_service"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/stop_service" />
+
+</menu>
