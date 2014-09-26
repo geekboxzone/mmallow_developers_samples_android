@@ -13,6 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources>
-    <string name="app_name">Shared</string>
+
+    <string name="app_name">EmbeddedApp Sample</string>
+    <string name="welcome_message">
+        This wearable app should be automatically installed on wearable devices whenever the
+        release build of the corresponding phone app is installed.
+    </string>
+
 </resources>
