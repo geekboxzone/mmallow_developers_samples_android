@@ -19,7 +19,7 @@
 
 <sample>
     <name>Flashlight</name>
-    <group>Connectivity</group>
+    <group>Wearable</group>
     <package>com.example.android.flashlight</package>
 
 

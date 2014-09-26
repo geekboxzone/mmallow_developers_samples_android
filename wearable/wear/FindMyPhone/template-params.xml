@@ -19,7 +19,7 @@
 
 <sample>
     <name>FindMyPhone</name>
-    <group>Connectivity</group>
+    <group>Wearable</group>
     <package>com.example.android.findphone</package>
 
 
