@@ -19,7 +19,7 @@
 
 <sample>
     <name>AgendaData</name>
-    <group>Connectivity</group>
+    <group>Wearable</group>
     <package>com.example.android.agendadata</package>
 
 

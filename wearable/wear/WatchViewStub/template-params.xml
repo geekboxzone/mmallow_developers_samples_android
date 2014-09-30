@@ -19,7 +19,7 @@
 
 <sample>
     <name>WatchViewStub</name>
-    <group>Connectivity</group>
+    <group>Wearable</group>
     <package>com.example.android.watchviewstub</package>
 
 

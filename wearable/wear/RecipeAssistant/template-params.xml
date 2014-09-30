@@ -19,7 +19,7 @@
 
 <sample>
     <name>RecipeAssistant</name>
-    <group>Connectivity</group>
+    <group>Wearable</group>
     <package>com.example.android.recipeassistant</package>
 
 
