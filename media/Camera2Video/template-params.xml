@@ -21,7 +21,7 @@
     <package>com.example.android.camera2video</package>
 
     <minSdk>21</minSdk>
-    <compileSdkVersion>"android-L"</compileSdkVersion>
+    <compileSdkVersion>21</compileSdkVersion>
 
     <strings>
         <intro>
