@@ -26,7 +26,7 @@
 
     <!-- change minSdk if needed-->
     <minSdk>14</minSdk>
-    <compileSdkVersion>"android-L"</compileSdkVersion>
+    <compileSdkVersion>21</compileSdkVersion>
 
 
     <dependency>com.android.support:support-v13:20.+</dependency>

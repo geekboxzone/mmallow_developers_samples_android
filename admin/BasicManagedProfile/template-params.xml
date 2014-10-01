@@ -26,7 +26,7 @@
 
     <!-- change minSdk if needed-->
     <minSdk>21</minSdk>
-    <compileSdkVersion>"android-L"</compileSdkVersion>
+    <compileSdkVersion>21</compileSdkVersion>
 
 
     <strings>
