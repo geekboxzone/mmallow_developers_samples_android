@@ -15,18 +15,13 @@
  limitations under the License.
 -->
 
-
-
 <sample>
     <name>LNotifications Sample</name>
     <group>UI</group>
     <package>com.example.android.lnotifications</package>
 
-
-
     <!-- change minSdk if needed-->
     <minSdk>21</minSdk>
-    <compileSdkVersion>"android-L"</compileSdkVersion>
 
     <strings>
         <intro>

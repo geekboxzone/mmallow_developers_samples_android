@@ -22,12 +22,8 @@
     <group>UI</group>
     <package>com.example.android.documentcentricrecents</package>
 
-
-
     <!-- change minSdk if needed-->
-    <minSdk>"android-L"</minSdk>
-    <compileSdkVersion>"android-L"</compileSdkVersion>
-
+    <minSdk>21</minSdk>
 
     <strings>
         <intro>
