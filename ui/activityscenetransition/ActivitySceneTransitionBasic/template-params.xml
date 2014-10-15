@@ -22,10 +22,10 @@
     <group>UI</group>
     <package>com.example.android.activityscenetransitionbasic</package>
 
-    <minSdk>21</minSdk>
+    <minSdk>7</minSdk>
     <compileSdkVersion>21</compileSdkVersion>
 
-    <dependency_external>'libs/volley.jar'</dependency_external>
+    <dependency>com.squareup.picasso:picasso:2.4.0</dependency>
 
     <strings>
         <intro>
