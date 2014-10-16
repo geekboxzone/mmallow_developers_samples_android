@@ -24,7 +24,7 @@
 
 
 
-    <minSdk>19</minSdk>
+    <minSdk>21</minSdk>
     <compileSdkVersion>21</compileSdkVersion>
 
 
