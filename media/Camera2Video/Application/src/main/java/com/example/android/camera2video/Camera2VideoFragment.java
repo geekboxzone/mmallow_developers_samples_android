@@ -144,9 +144,9 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
     private boolean mOpeningCamera;
 
     /**
-     * {@link CameraDevice.StateListener} is called when {@link CameraDevice} changes its status.
+     * {@link CameraDevice.StateCallback} is called when {@link CameraDevice} changes its status.
      */
-    private CameraDevice.StateListener mStateListener = new CameraDevice.StateListener() {
+    private CameraDevice.StateCallback mStateCallback = new CameraDevice.StateCallback() {
 
         @Override
         public void onOpened(CameraDevice cameraDevice) {
@@ -239,7 +239,7 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
     }
 
     /**
-     * Tries to open a {@link CameraDevice}. The result is listened by `mStateListener`.
+     * Tries to open a {@link CameraDevice}. The result is listened by `mStateCallback`.
      */
     private void openCamera() {
         final Activity activity = getActivity();
@@ -260,7 +260,7 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
             } else {
                 mTextureView.setAspectRatio(mPreviewSize.getHeight(), mPreviewSize.getWidth());
             }
-            manager.openCamera(cameraId, mStateListener, null);
+            manager.openCamera(cameraId, mStateCallback, null);
         } catch (CameraAccessException e) {
             Toast.makeText(activity, "Cannot access the camera.", Toast.LENGTH_SHORT).show();
             activity.finish();
@@ -287,7 +287,7 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
             List<Surface> surfaces = new ArrayList<Surface>();
             surfaces.add(surface);
             mPreviewBuilder.addTarget(surface);
-            mCameraDevice.createCaptureSession(surfaces, new CameraCaptureSession.StateListener() {
+            mCameraDevice.createCaptureSession(surfaces, new CameraCaptureSession.StateCallback() {
 
                 @Override
                 public void onConfigured(CameraCaptureSession cameraCaptureSession) {
@@ -394,7 +394,7 @@ public class Camera2VideoFragment extends Fragment implements View.OnClickListen
             Surface previewSurface = new Surface(mTextureView.getSurfaceTexture());
             builder.addTarget(previewSurface);
             mCameraDevice.createCaptureSession(Arrays.asList(surface, previewSurface),
-                    new CameraCaptureSession.StateListener() {
+                    new CameraCaptureSession.StateCallback() {
                         @Override
                         public void onConfigured(CameraCaptureSession session) {
                             // Start recording
