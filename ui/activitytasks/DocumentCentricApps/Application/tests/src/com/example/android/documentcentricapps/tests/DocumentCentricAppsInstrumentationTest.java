@@ -14,10 +14,10 @@
 * limitations under the License.
 */
 
-package com.example.android.documentcentricrecents.tests;
+package com.example.android.documentcentricapps.tests;
 
-import com.example.android.documentcentricrecents.DocumentCentricActivity;
-import com.example.android.documentcentricrecents.R;
+import com.example.android.documentcentricapps.DocumentCentricActivity;
+import com.example.android.documentcentricapps.R;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -29,15 +29,15 @@ import android.widget.Button;
 import java.util.List;
 
 /**
- * Instrumentation tests for DocumentCentricRecents sample.
+ * Instrumentation tests for DocumentCentricApps sample.
  */
 @LargeTest
-public class DocumentCentricRecentsInstrumentationTest extends
+public class DocumentCentricAppsInstrumentationTest extends
         ActivityInstrumentationTestCase2<DocumentCentricActivity> {
 
     private DocumentCentricActivity mDocumentCentricActivity;
 
-    public DocumentCentricRecentsInstrumentationTest() {
+    public DocumentCentricAppsInstrumentationTest() {
         super(DocumentCentricActivity.class);
     }
 
@@ -47,7 +47,7 @@ public class DocumentCentricRecentsInstrumentationTest extends
         mDocumentCentricActivity = getActivity();
     }
 
-    public void testNewDocument_CreatesRecentsEntry() {
+    public void testNewDocument_CreatesOverviewEntry() {
         // Given a initialized Activity
         assertNotNull("mDocumentCentricActivity is null", mDocumentCentricActivity);
         final Button createNewDocumentButton = (Button) mDocumentCentricActivity
@@ -57,7 +57,7 @@ public class DocumentCentricRecentsInstrumentationTest extends
         // When "Create new Document" Button is clicked
         TouchUtils.clickView(this, createNewDocumentButton);
 
-        // Then a entry in recent app tasks is created.
+        // Then a entry in overview app tasks is created.
         List<ActivityManager.AppTask> recentAppTasks = getRecentAppTasks();
         assertEquals("# of recentAppTasks does not match", 2, recentAppTasks.size());
     }

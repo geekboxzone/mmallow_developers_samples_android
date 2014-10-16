@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.documentcentricrecents;
+package com.example.android.documentcentricapps;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,7 +25,7 @@ import android.view.View;
 import android.widget.CheckBox;
 
 /**
- * DocumentCentricActivity shows the basic usage of the new Document-Centric Recents API. The new
+ * DocumentCentricActivity shows the basic usage of the new Document-Centric Apps API. The new
  * API modifies the meaning of the {@link Intent#FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET} flag, which is
  * now deprecated. In versions before L it serves to define a boundary between the main task and a
  * subtask. The subtask holds a different thumbnail and all activities in it are finished when the
@@ -56,7 +56,7 @@ public class DocumentCentricActivity extends Activity {
     }
 
     @Override
-    protected void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
+    public void onPostCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onPostCreate(savedInstanceState, persistentState);
         // Restore state from PersistableBundle
         if (persistentState != null) {
@@ -65,7 +65,7 @@ public class DocumentCentricActivity extends Activity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         /*
         To maintain activity state across reboots the system saves and restore critical information for
         all tasks and their activities. Information known by the system includes the activity stack order,
@@ -94,7 +94,8 @@ public class DocumentCentricActivity extends Activity {
 
 
     /**
-     * Returns an new {@link Intent} to start {@link NewDocumentActivity} as a new document in recents.
+     * Returns an new {@link Intent} to start {@link NewDocumentActivity} as a new document in
+     * overview menu.
      *
      * To start a new document task {@link Intent#FLAG_ACTIVITY_NEW_DOCUMENT} must be used. The
      * system will search through existing tasks for one whose Intent matches the Intent component
