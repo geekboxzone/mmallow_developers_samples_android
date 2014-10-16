@@ -23,7 +23,7 @@
     <package>com.example.android.interpolator</package>
 
     <!-- change minSdk if needed-->
-    <minSdk>L</minSdk>
+    <minSdk>21</minSdk>
 
     <strings>
         <intro>
