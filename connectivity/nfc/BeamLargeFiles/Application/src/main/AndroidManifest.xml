@@ -21,7 +21,7 @@
     android:versionName="1.0">
 
     <!-- Large file beam requires API 16 or above. -->
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="17" />
+    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
 
     <!-- The NFC permission is required to use NfcAdapter. -->
     <uses-permission android:name="android.permission.NFC" />
