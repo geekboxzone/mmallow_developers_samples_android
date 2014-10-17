@@ -65,6 +65,11 @@ List<String> samples = [
 "ui/notifications/LNotifications",
 "ui/DrawableTinting",
 "ui/Interpolator",
+"media/HdrViewfinder",
+"ui/activitytasks/DocumentCentricApps",
+"ui/activitytasks/DocumentCentricRelinquishIdentity",
+"admin/AppRestrictionEnforcer",
+"admin/AppRestrictionSchema",
 ]
 
 List<String> taskNames = [
