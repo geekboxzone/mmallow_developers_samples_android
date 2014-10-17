@@ -48,6 +48,7 @@ List<String> samples = [
 "ui/views/SwipeRefreshLayout/SwipeRefreshListFragment",
 "ui/views/SwipeRefreshLayout/SwipeRefreshMultipleViews",
 "media/MediaRouter",
+"media/MediaEffects",
 "admin/BasicManagedProfile",
 "media/Camera2Basic",
 "media/Camera2Video",
