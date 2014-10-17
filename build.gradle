@@ -71,6 +71,7 @@ List<String> samples = [
 "ui/activitytasks/DocumentCentricRelinquishIdentity",
 "admin/AppRestrictionEnforcer",
 "admin/AppRestrictionSchema",
+"bluetooth/BluetoothChat",
 ]
 
 List<String> taskNames = [
