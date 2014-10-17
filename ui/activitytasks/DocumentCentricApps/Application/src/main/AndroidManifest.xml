@@ -16,18 +16,16 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.documentcentricrecents"
+    package="com.example.android.documentcentricapps"
     android:versionCode="1"
     android:versionName="1.0">
-
-    <uses-sdk android:minSdkVersion="android-L" android:targetSdkVersion="android-L" />
 
     <application android:allowBackup="true"
         android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".DocumentCentricActivity"
+        <activity android:name="com.example.android.documentcentricapps.DocumentCentricActivity"
                   android:label="@string/app_name"
                   android:persistableMode="persistAcrossReboots">
             <intent-filter>
@@ -36,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewDocumentActivity"
+            android:name="com.example.android.documentcentricapps.NewDocumentActivity"
             android:label="@string/activity_new_document_title" >
         </activity>
     </application>

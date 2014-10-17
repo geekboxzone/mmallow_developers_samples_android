@@ -23,6 +23,6 @@
     <string name="activity_new_document_title">DocumentActivity</string>
     <string name="new_document_button_text">Create new document</string>
     <string name="multiple_task_checkbox_label">Task per document</string>
-    <string name="remove_task_button_text">Remove from Recents</string>
+    <string name="remove_task_button_text">Remove from Overview</string>
 
 </resources>

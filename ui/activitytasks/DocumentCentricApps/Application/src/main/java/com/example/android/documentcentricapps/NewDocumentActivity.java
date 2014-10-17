@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.documentcentricrecents;
+package com.example.android.documentcentricapps;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,7 +23,7 @@ import android.view.View;
 import android.widget.TextView;
 
 /**
- * Represents a "document" in the new recents notion. This is just a placeholder.
+ * Represents a "document" in the new overview notion. This is just a placeholder.
  * Real world examples of this could be:
  *
  * <ul>
@@ -59,8 +59,8 @@ public class NewDocumentActivity extends Activity {
         setDocumentCounterText(R.string.reusing_document_counter);
     }
 
-    public void onRemoveFromRecents(View view) {
-        // It is good pratice to remove a document from the recents stack if not needed anymore.
+    public void onRemoveFromOverview(View view) {
+        // It is good pratice to remove a document from the overview stack if not needed anymore.
         finishAndRemoveTask();
     }
 

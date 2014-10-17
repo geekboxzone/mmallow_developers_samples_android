@@ -14,28 +14,26 @@
 * limitations under the License.
 */
 
-package com.example.android.documentcentricrecents.tests;
+package com.example.android.documentcentricapps.tests;
 
-import com.example.android.documentcentricrecents.DocumentCentricActivity;
-import com.example.android.documentcentricrecents.R;
+import com.example.android.documentcentricapps.DocumentCentricActivity;
+import com.example.android.documentcentricapps.R;
 
 import android.content.Intent;
 import android.test.ActivityUnitTestCase;
-import android.test.suitebuilder.annotation.LargeTest;
 import android.test.suitebuilder.annotation.MediumTest;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 
 /**
- * Unit tests for DocumentCentricRecents sample.
+ * Unit tests for DocumentCentricApps sample.
  */
 @MediumTest
-public class DocumentCentricRecentsUnitTest extends ActivityUnitTestCase<DocumentCentricActivity> {
+public class DocumentCentricAppsUnitTest extends ActivityUnitTestCase<DocumentCentricActivity> {
 
     private DocumentCentricActivity mDocumentCentricActivity;
 
-    public DocumentCentricRecentsUnitTest() {
+    public DocumentCentricAppsUnitTest() {
         super(DocumentCentricActivity.class);
     }
 
