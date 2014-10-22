@@ -71,7 +71,7 @@ List<String> samples = [
 "ui/activitytasks/DocumentCentricRelinquishIdentity",
 "admin/AppRestrictionEnforcer",
 "admin/AppRestrictionSchema",
-"bluetooth/BluetoothChat",
+"connectivity/bluetooth/BluetoothChat",
 "wearable/wear/AgendaData",
 "wearable/wear/DataLayer",
 "wearable/wear/DelayedConfirmation",
