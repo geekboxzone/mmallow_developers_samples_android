@@ -14,7 +14,7 @@ out/
 src/common
 src/template
 _index.jd
-README.txt
+README-wear.txt
 
 # Libraries used by the app
 # Can explicitly add if we want, but shouldn't do so blindly.  Licenses, bloat, etc.
