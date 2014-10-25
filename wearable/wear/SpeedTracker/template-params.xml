@@ -47,7 +47,5 @@ coordinates on a map on the phone.
 
     <template src="base"/>
     <template src="Wear"/>
-    <common src="logger"/>
-    <common src="activities"/>
 
 </sample>
