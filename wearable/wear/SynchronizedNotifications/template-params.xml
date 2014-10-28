@@ -40,7 +40,5 @@
     <template src="base"/>
     <template src="SimpleView"/>
     <template src="Wear"/>
-    <common src="logger"/>
-    <common src="activities"/>
 
 </sample>

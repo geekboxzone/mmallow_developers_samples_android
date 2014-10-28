@@ -41,7 +41,5 @@ notifications are displayed, both in a phone\'s notification shade and on the we
 
     <template src="base"/>
     <template src="Wear"/>
-    <common src="logger"/>
-    <common src="activities"/>
 
 </sample>
