@@ -46,6 +46,6 @@ coordinates on a map on the phone.
     </strings>
 
     <template src="base"/>
-    <template src="Wear"/>
+    <template src="WearPlusShared"/>
 
 </sample>

@@ -39,6 +39,6 @@
 
     <template src="base"/>
     <template src="SimpleView"/>
-    <template src="Wear"/>
+    <template src="WearPlusShared"/>
 
 </sample>
