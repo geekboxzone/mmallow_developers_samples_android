@@ -60,7 +60,6 @@ List<String> samples = [
 "ui/views/FloatingActionButton/FloatingActionButtonBasic",
 "ui/views/RevealEffect/RevealEffectBasic",
 "background/JobScheduler",
-"wearable/wear/SynchronizedNotifications",
 "ui/views/RecyclerView",
 "ui/views/CardView",
 "ui/notifications/LNotifications",
@@ -87,6 +86,7 @@ List<String> samples = [
 "wearable/wear/RecipeAssistant",
 "wearable/wear/SkeletonWearableApp",
 "wearable/wear/SpeedTracker",
+"wearable/wear/SynchronizedNotifications",
 "wearable/wear/Timer",
 "wearable/wear/WatchViewStub"
 ]
