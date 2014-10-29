@@ -40,7 +40,5 @@
     </strings>
 
     <template src="base"/>
-    <common src="logger"/>
-    <common src="activities"/>
 
 </sample>
