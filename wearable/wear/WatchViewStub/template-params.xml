@@ -20,7 +20,7 @@
 <sample>
     <name>WatchViewStub</name>
     <group>Wearable</group>
-    <package>com.example.android.watchviewstub</package>
+    <package>com.example.android.google.wearable.watchviewstub</package>
 
 
 

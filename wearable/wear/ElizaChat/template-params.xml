@@ -20,7 +20,7 @@
 <sample>
     <name>ElizaChat</name>
     <group>Wearable</group>
-    <package>com.example.android.elizachat</package>
+    <package>com.example.android.wearable.elizachat</package>
 
 
 

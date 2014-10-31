@@ -20,7 +20,7 @@
 <sample>
     <name>DataLayer</name>
     <group>Wearable</group>
-    <package>com.example.android.datalayer</package>
+    <package>com.example.android.wearable.datalayer</package>
 
 
 

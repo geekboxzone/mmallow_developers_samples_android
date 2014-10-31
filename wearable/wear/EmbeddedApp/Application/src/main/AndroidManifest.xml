@@ -15,7 +15,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.embeddedapp" >
+    package="com.example.android.wearable.embeddedapp" >
     <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
     <application
         android:allowBackup="true"
