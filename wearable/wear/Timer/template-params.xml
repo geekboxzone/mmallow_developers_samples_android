@@ -20,7 +20,7 @@
 <sample>
     <name>Timer</name>
     <group>Wearable</group>
-    <package>com.example.android.timer</package>
+    <package>com.example.android.wearable.timer</package>
 
 
 

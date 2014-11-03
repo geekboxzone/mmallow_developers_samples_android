@@ -20,7 +20,7 @@
 <sample>
     <name>SynchronizedNotifications</name>
     <group>Wearable</group>
-    <package>com.example.android.synchronizednotifications</package>
+    <package>com.example.android.wearable.synchronizednotifications</package>
 
 
 
