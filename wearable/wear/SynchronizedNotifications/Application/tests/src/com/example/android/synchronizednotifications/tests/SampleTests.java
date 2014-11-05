@@ -13,9 +13,9 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.example.android.synchronizednotifications.tests;
+package com.example.android.wearable.synchronizednotifications.tests;
 
-import com.example.android.synchronizednotifications.*;
+import com.example.android.wearable.synchronizednotifications.*;
 
 import android.test.ActivityInstrumentationTestCase2;
 
