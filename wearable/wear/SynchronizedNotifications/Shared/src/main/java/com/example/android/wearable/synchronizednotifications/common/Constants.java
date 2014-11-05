@@ -33,5 +33,5 @@ public final class Constants {
     public static final String KEY_CONTENT = "content";
 
     public static final String ACTION_DISMISS
-            = "com.example.android.synchronizednotifications.DISMISS";
+            = "com.example.android.wearable.synchronizednotifications.DISMISS";
 }
