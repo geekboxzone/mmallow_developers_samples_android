@@ -20,7 +20,7 @@
 <sample>
     <name>GridViewPager</name>
     <group>Wearable</group>
-    <package>com.example.android.gridviewpager</package>
+    <package>com.example.android.wearable.gridviewpager</package>
 
 
 

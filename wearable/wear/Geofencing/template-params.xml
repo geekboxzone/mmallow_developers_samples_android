@@ -20,7 +20,7 @@
 <sample>
     <name>Geofencing</name>
     <group>Wearable</group>
-    <package>com.example.android.geofencing</package>
+    <package>com.example.android.wearable.geofencing</package>
 
 
 

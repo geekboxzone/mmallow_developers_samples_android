@@ -20,7 +20,7 @@
 <sample>
     <name>JumpingJack</name>
     <group>Wearable</group>
-    <package>com.example.android.jumpingjack</package>
+    <package>com.example.android.wearable.jumpingjack</package>
 
 
 
