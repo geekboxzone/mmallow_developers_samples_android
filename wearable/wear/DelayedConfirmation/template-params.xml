@@ -20,7 +20,7 @@
 <sample>
     <name>DelayedConfirmation</name>
     <group>Wearable</group>
-    <package>com.example.android.delayedconfirmation</package>
+    <package>com.example.android.wearable.delayedconfirmation</package>
 
 
 
