@@ -20,7 +20,7 @@
     <package>com.example.android.customchoicelist</package>
 
     <!-- change minSdk if needed-->
-    <minSdk>3</minSdk>
+    <minSdk>4</minSdk>
 
     <strings>
         <intro>
