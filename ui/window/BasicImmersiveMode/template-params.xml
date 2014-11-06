@@ -19,11 +19,8 @@
     <group>UI</group>
     <package>com.example.android.basicimmersivemode</package>
     
-
-
     <!-- change minSdk if needed-->
     <minSdk>19</minSdk>
-    <compileSdkVersion>19</compileSdkVersion>
 
     <strings>
         <intro>
