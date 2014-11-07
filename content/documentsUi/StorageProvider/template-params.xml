@@ -22,11 +22,8 @@
     <group>Content</group>
     <package>com.example.android.storageprovider</package>
 
-
-
     <!-- change minSdk if needed-->
     <minSdk>19</minSdk>
-
 
     <strings>
         <intro>
