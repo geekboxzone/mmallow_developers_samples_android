@@ -40,5 +40,6 @@
     <template src="base"/>
     <template src="SimpleView"/>
     <template src="WearPlusShared"/>
-
+    <common src="logger"/>
+    <common src="activities"/>
 </sample>
