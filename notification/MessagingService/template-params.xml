@@ -21,8 +21,6 @@
 
     <minSdk>21</minSdk>
 
-    <dependency_external>'libs/android-auto-sdk.jar'</dependency_external>
-
     <strings>
         <intro>
             <![CDATA[
