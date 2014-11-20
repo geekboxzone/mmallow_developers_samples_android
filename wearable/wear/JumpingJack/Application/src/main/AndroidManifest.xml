@@ -19,7 +19,7 @@
     package="com.example.android.wearable.jumpingjack">
 
     <uses-sdk android:minSdkVersion="18"
-              android:targetSdkVersion="20" />
+              android:targetSdkVersion="21" />
     <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application android:allowBackup="true"
