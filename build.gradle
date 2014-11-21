@@ -90,7 +90,8 @@ List<String> samples = [
 "wearable/wear/SpeedTracker",
 "wearable/wear/SynchronizedNotifications",
 "wearable/wear/Timer",
-"wearable/wear/WatchViewStub"
+"wearable/wear/WatchViewStub",
+"wearable/wear/WatchFace",
 ]
 
 List<String> taskNames = [
