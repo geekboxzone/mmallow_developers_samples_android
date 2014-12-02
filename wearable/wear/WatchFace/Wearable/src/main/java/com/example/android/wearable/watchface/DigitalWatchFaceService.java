@@ -23,6 +23,7 @@ import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -404,7 +405,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
         }
 
         @Override
-        public void onDraw(Canvas canvas) {
+        public void onDraw(Canvas canvas, Rect bounds) {
             mTime.setToNow();
 
             // Show colons for the first half of each second so the colons blink on when the time
@@ -412,7 +413,7 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
             mShouldDrawColons = (System.currentTimeMillis() % 1000) < 500;
 
             // Draw the background.
-            canvas.drawRect(0, 0, canvas.getWidth(), canvas.getHeight(), mBackgroundPaint);
+            canvas.drawRect(0, 0, bounds.width(), bounds.height(), mBackgroundPaint);
 
             // Draw the hours.
             float x = mXOffset;
