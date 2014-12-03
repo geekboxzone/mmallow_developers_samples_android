@@ -27,6 +27,8 @@
     <!-- change minSdk if needed-->
     <minSdk>18</minSdk>
 
+    <dependency>com.google.android.gms:play-services-location:6.5.+</dependency>
+
 
     <strings>
         <intro>
