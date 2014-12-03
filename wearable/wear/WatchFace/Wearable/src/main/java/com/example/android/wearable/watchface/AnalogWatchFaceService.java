@@ -80,7 +80,7 @@ public class AnalogWatchFaceService extends CanvasWatchFaceService {
                             Log.v(TAG, "updating time");
                         }
                         invalidate();
-                        if (isVisible()) {
+                        if (shouldTimerBeRunning()) {
                             long timeMs = System.currentTimeMillis();
                             long delayMs = INTERACTIVE_UPDATE_RATE_MS
                                     - (timeMs % INTERACTIVE_UPDATE_RATE_MS);
@@ -179,6 +179,9 @@ public class AnalogWatchFaceService extends CanvasWatchFaceService {
         @Override
         public void onAmbientModeChanged(boolean inAmbientMode) {
             super.onAmbientModeChanged(inAmbientMode);
+            if (Log.isLoggable(TAG, Log.DEBUG)) {
+                Log.d(TAG, "onAmbientModeChanged: " + inAmbientMode);
+            }
             if (mLowBitAmbient) {
                 boolean antiAlias = !inAmbientMode;
                 mHourPaint.setAntiAlias(antiAlias);
@@ -187,6 +190,10 @@ public class AnalogWatchFaceService extends CanvasWatchFaceService {
                 mTickPaint.setAntiAlias(antiAlias);
             }
             invalidate();
+
+            // Whether the timer should be running depends on whether we're in ambient mode (as well
+            // as whether we're visible), so we may need to start or stop the timer.
+            updateTimer();
         }
 
         @Override
@@ -264,6 +271,9 @@ public class AnalogWatchFaceService extends CanvasWatchFaceService {
         @Override
         public void onVisibilityChanged(boolean visible) {
             super.onVisibilityChanged(visible);
+            if (Log.isLoggable(TAG, Log.DEBUG)) {
+                Log.d(TAG, "onVisibilityChanged: " + visible);
+            }
 
             if (visible) {
                 registerReceiver();
@@ -271,12 +281,13 @@ public class AnalogWatchFaceService extends CanvasWatchFaceService {
                 // Update time zone in case it changed while we weren't visible.
                 mTime.clear(TimeZone.getDefault().getID());
                 mTime.setToNow();
-
-                mUpdateTimeHandler.sendEmptyMessage(MSG_UPDATE_TIME);
             } else {
-                mUpdateTimeHandler.removeMessages(MSG_UPDATE_TIME);
                 unregisterReceiver();
             }
+
+            // Whether the timer should be running depends on whether we're visible (as well as
+            // whether we're in ambient mode), so we may need to start or stop the timer.
+            updateTimer();
         }
 
         private void registerReceiver() {
@@ -295,5 +306,28 @@ public class AnalogWatchFaceService extends CanvasWatchFaceService {
             mRegisteredTimeZoneReceiver = false;
             AnalogWatchFaceService.this.unregisterReceiver(mTimeZoneReceiver);
         }
+
+        /**
+         * Starts the {@link #mUpdateTimeHandler} timer if it should be running and isn't currently
+         * or stops it if it shouldn't be running but currently is.
+         */
+        private void updateTimer() {
+            if (Log.isLoggable(TAG, Log.DEBUG)) {
+                Log.d(TAG, "updateTimer");
+            }
+            mUpdateTimeHandler.removeMessages(MSG_UPDATE_TIME);
+            if (shouldTimerBeRunning()) {
+                mUpdateTimeHandler.sendEmptyMessage(MSG_UPDATE_TIME);
+            }
+        }
+
+        /**
+         * Returns whether the {@link #mUpdateTimeHandler} timer should be running. The timer should
+         * only run when we're visible and in interactive mode.
+         */
+        private boolean shouldTimerBeRunning() {
+            return isVisible() && !isInAmbientMode();
+        }
+
     }
 }

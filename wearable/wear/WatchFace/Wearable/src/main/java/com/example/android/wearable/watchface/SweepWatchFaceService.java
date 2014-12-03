@@ -141,6 +141,9 @@ public class SweepWatchFaceService extends CanvasWatchFaceService {
         @Override
         public void onAmbientModeChanged(boolean inAmbientMode) {
             super.onAmbientModeChanged(inAmbientMode);
+            if (Log.isLoggable(TAG, Log.DEBUG)) {
+                Log.d(TAG, "onAmbientModeChanged: " + inAmbientMode);
+            }
             if (mLowBitAmbient) {
                 boolean antiAlias = !inAmbientMode;
                 mHourPaint.setAntiAlias(antiAlias);
@@ -228,8 +231,8 @@ public class SweepWatchFaceService extends CanvasWatchFaceService {
             float hrY = (float) -Math.cos(hrRot) * hrLength;
             canvas.drawLine(centerX, centerY, centerX + hrX, centerY + hrY, mHourPaint);
 
-            // Draw every frame as long as we're visible.
-            if (isVisible()) {
+            // Draw every frame as long as we're visible and in interactive mode.
+            if (isVisible() && !isInAmbientMode()) {
                 invalidate();
             }
         }
