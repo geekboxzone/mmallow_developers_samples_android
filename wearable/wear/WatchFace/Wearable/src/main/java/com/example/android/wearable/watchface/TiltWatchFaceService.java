@@ -223,9 +223,6 @@ public class TiltWatchFaceService extends Gles2WatchFaceService {
             }
             super.onGlSurfaceCreated(width, height);
 
-            // Adjust the viewport based on geometry changes such as screen rotation.
-            GLES20.glViewport(0, 0, width, height);
-
             // Update the projection matrix based on the new aspect ratio.
             final float aspectRatio = (float) width / height;
             Matrix.frustumM(mProjectionMatrix,
