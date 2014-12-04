@@ -24,6 +24,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -203,11 +204,11 @@ public class AnalogWatchFaceService extends CanvasWatchFaceService {
         }
 
         @Override
-        public void onDraw(Canvas canvas) {
+        public void onDraw(Canvas canvas, Rect bounds) {
             mTime.setToNow();
 
-            int width = canvas.getWidth();
-            int height = canvas.getHeight();
+            int width = bounds.width();
+            int height = bounds.height();
 
             // Draw the background, scaled to fit.
             if (mBackgroundScaledBitmap == null
