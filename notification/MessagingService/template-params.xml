@@ -33,4 +33,47 @@ Each unread conversation from a user is sent as a distinct notification.
     </strings>
 
     <template src="basebuild" />
+
+    <metadata>
+        <status>PUBLISHED</status>
+        <categories>UI, Notification</categories>
+        <technologies>Android</technologies>
+        <languages>Java</languages>
+        <solutions>Mobile</solutions>
+        <level>ADVANCED</level>
+        <icon>screenshots/icon-web.png</icon>
+        <screenshots>
+            <img>screenshots/1-main.png</img>
+            <img>screenshots/2-onemessage.png</img>
+            <img>screenshots/3-threemessages.png</img>
+        </screenshots>
+        <api_refs>
+            <android>android.app.Service</android>
+            <android>android.content.Intent</android>
+            <android>android.support.v4.app.NotificationCompat</android>
+            <android>android.support.v4.app.NotificationCompat.CarExtender</android>
+        </api_refs>
+        <description>
+<![CDATA[
+This sample shows a simple service that sends notifications using
+NotificationCompat. In addition to sending a notification, it also extends
+the notification with a CarExtender to make it compatible with Android Auto.
+Each unread conversation from a user is sent as a distinct notification.
+]]>
+        </description>
+        <intro>
+<![CDATA[
+This sample shows a simple service that sends [notifications][1] using
+NotificationCompat.
+
+In addition to sending a notification, it also extends
+the notification with a [CarExtender][2] to make it compatible with Android Auto.
+
+Each unread conversation from a user is sent as a distinct notification.
+
+[1]: https://developer.android.com/guide/topics/ui/notifiers/notifications.html
+[2]: https://developer.android.com/reference/android/support/v4/app/NotificationCompat.CarExtender.html
+]]>
+        </intro>
+    </metadata>
 </sample>
