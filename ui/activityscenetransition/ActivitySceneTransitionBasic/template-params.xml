@@ -22,7 +22,7 @@
     <group>UI</group>
     <package>com.example.android.activityscenetransitionbasic</package>
 
-    <minSdk>7</minSdk>
+    <minSdk>21</minSdk>
     <compileSdkVersion>21</compileSdkVersion>
 
     <dependency>com.squareup.picasso:picasso:2.4.0</dependency>
@@ -31,9 +31,9 @@
         <intro>
             <![CDATA[
             Demonstrates how to the use Activity scene transitions when transitions
-            from one Activity to another. Uses a combination of moveImage and changeBounds
-            to nicely transition a grid of images to an Activity with a large image and detail
-            text.
+            from one Activity to another. Uses a combination of changeImageTransform and
+            changeBounds to nicely transition a grid of images to an Activity with a large image
+            and detail text.
             ]]>
         </intro>
     </strings>
