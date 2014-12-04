@@ -49,7 +49,7 @@
     <technologies>Android</technologies>
     <languages>Java</languages>
     <solutions>Mobile</solutions>
-    <level>BEGINNER</level>
+    <level>ADVANCED</level>
     <icon>screenshots/big_icon.png</icon>
     <screenshots>
         <img>screenshots/screenshot1.png</img>
@@ -66,30 +66,34 @@
         <android>android.hardware.SensorManager</android>
     </api_refs>
     <description>
-        Sample demonstrating how to set up SensorEventListeners for step
-        detectors and step counters.
+<![CDATA[
+Sample demonstrating how to set up SensorEventListeners for step
+detectors and step counters.
+]]>
     </description>
 
     <intro>
-    This sample demonstrates the use of the two step [sensors][1] (step detector and counter) and
-    sensor batching.
+<![CDATA[
+This sample demonstrates the use of the two step [sensors][1] (step detector and counter) and
+sensor batching.
 
-    It shows how to register a [SensorEventListener][2] with and without
-    batching and shows how these events are received.
+It shows how to register a [SensorEventListener][2] with and without
+batching and shows how these events are received.
 
-    The Step Detector sensor fires an
-    event when a step is detected, while the step counter returns the total number of
-    steps since a listener was first registered for this sensor.
+The Step Detector sensor fires an
+event when a step is detected, while the step counter returns the total number of
+steps since a listener was first registered for this sensor.
 
-    Both sensors only count steps while a listener is registered. This sample only covers the
-    basic case, where a listener is only registered while the app is running. Likewise,
-    batched sensors can be used in the background (when the CPU is suspended), which
-    requires manually flushing the [sensor event][3] queue before it overflows, which is not
-    covered in this sample.
+Both sensors only count steps while a listener is registered. This sample only covers the
+basic case, where a listener is only registered while the app is running. Likewise,
+batched sensors can be used in the background (when the CPU is suspended), which
+requires manually flushing the [sensor event][3] queue before it overflows, which is not
+covered in this sample.
 
-    [1]: https://developer.android.com/reference/android/hardware/Sensor.html
-    [2]: https://developer.android.com/reference/android/hardware/SensorEventListener.html
-    [3]: https://developer.android.com/reference/android/hardware/SensorEvent.html
+[1]: https://developer.android.com/reference/android/hardware/Sensor.html
+[2]: https://developer.android.com/reference/android/hardware/SensorEventListener.html
+[3]: https://developer.android.com/reference/android/hardware/SensorEvent.html
+]]>
     </intro>
 </metadata>
 
