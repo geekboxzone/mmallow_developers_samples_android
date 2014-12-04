@@ -38,6 +38,11 @@
         </intro>
     </strings>
 
+    <attribution>
+        <copyright>Copyright 2013 Square, Inc.</copyright>
+        <license>APACHE2</license>
+    </attribution>
+
     <template src="base"/>
     <common src="logger"/>
 
