@@ -16,7 +16,5 @@
 -->
 
 <resources>
-    <string name="element_text">Element</string>
-    <string name="grid_layout_manager">Grid Layout Manager</string>
-    <string name="linear_layout_manager">Linear Layout Manager</string>
+    <dimen name="list_item_height">72dp</dimen>
 </resources>
