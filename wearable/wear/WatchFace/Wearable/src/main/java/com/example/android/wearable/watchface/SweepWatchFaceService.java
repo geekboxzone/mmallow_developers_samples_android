@@ -24,6 +24,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -165,7 +166,7 @@ public class SweepWatchFaceService extends CanvasWatchFaceService {
         }
 
         @Override
-        public void onDraw(Canvas canvas) {
+        public void onDraw(Canvas canvas, Rect bounds) {
             if (Log.isLoggable(TAG, Log.VERBOSE)) {
                 Log.v(TAG, "onDraw");
             }
@@ -173,8 +174,8 @@ public class SweepWatchFaceService extends CanvasWatchFaceService {
             mTime.set(now);
             int milliseconds = (int) (now % 1000);
 
-            int width = canvas.getWidth();
-            int height = canvas.getHeight();
+            int width = bounds.width();
+            int height = bounds.height();
 
             // Draw the background, scaled to fit.
             if (mBackgroundScaledBitmap == null
