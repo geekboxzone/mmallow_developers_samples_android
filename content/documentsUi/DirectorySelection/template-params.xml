@@ -55,8 +55,8 @@
 
         <description>
 <![CDATA[
-A basic app showing how to use [Directory Selection][1] API to let users
-select an entire directory subtree, which extends the [Storage Access Framework][2]
+A basic app showing how to use Directory Selection API to let users
+select an entire directory subtree, which extends the Storage Access Framework
 introduced in Android 4.4 (API level 19).
 ]]>
         </description>
@@ -64,8 +64,8 @@ introduced in Android 4.4 (API level 19).
         <intro>
 <![CDATA[
 The [Directory Selection][1] API, which was introduced in Android 5.0 (API level 21)
- extends the [Storage Access Framework][2] to let users select an entire directory subtree,
- giving apps read/write access to all contained documents without requiring user
+extends the [Storage Access Framework][2] to let users select an entire directory subtree,
+giving apps read/write access to all contained documents without requiring user
 confirmation for each item.
 
 To select a directory subtree, build and send an [OPEN_DOCUMENT_TREE intent][3] like in the
