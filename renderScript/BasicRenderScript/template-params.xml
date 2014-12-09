@@ -29,7 +29,7 @@
 
     <defaultConfig>
             renderscriptTargetApi 18
-            renderscriptSupportMode true
+            renderscriptSupportModeEnabled true
     </defaultConfig>
 
     <strings>
