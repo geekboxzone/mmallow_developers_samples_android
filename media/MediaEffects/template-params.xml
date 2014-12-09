@@ -50,7 +50,7 @@
         <languages>Java</languages>
         <solutions>Mobile</solutions>
         <level>ADVANCED</level>
-        <icon>Application/src/main/big_icon.png</icon>
+        <icon>screenshots/icon-web.png</icon>
         <screenshots>
             <img>screenshots/menu.png</img>
             <img>screenshots/duotone.png</img>
@@ -63,8 +63,10 @@
         </api_refs>
 
         <description>
+<![CDATA[
 This sample shows how to use the Media Effects APIs that were
 introduced in Android 4.0.
+]]>
         </description>
 
         <intro>

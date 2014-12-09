@@ -37,7 +37,7 @@
     <common src="activities"/>
     <common src="view"/>
 
-        <metadata>
+    <metadata>
         <status>PUBLISHED</status>
         <categories>Transition, UI</categories>
         <technologies>Android</technologies>
@@ -55,14 +55,15 @@
         </api_refs>
 
         <description>
+<![CDATA[
 A basic app showing how to use the Transition framework introduced in
 KitKat. The app shows radioboxes to select between different Scenes,
 and uses various ways to transition between them.
+]]>
         </description>
 
         <intro>
 <![CDATA[
-
 A Scene is an encapsulation of the state of a view hierarchy,
 including the views in that hierarchy and the various values
 (layout-related and otherwise) that those views have. A scene can be
@@ -83,7 +84,6 @@ and which run custom animations when those properties change values.
 TransitionManager is used to specify custom transitions for particular
 scene changes, and to cause scene changes with specific transitions to
 take place.
-
 ]]>
         </intro>
     </metadata>
