@@ -35,4 +35,49 @@
 
     <template src="base"/>
 
+    <metadata>
+        <status>PUBLISHED</status>
+        <categories>Notification</categories>
+        <technologies>Android</technologies>
+        <languages>Java</languages>
+        <solutions>Mobile</solutions>
+        <level>INTERMEDIATE</level>
+        <icon>screenshots/icon-web.png</icon>
+        <screenshots>
+            <img>screenshots/1-headsup.png</img>
+            <img>screenshots/2-visibility.png</img>
+            <img>screenshots/3-others.png</img>
+        </screenshots>
+        <api_refs>
+            <android>android.app.Notification</android>
+            <android>android.app.Notification.Builder</android>
+            <android>android.app.NotificationManager</android>
+        </api_refs>
+
+        <description>
+<![CDATA[
+This sample demonstrates new features for notifications introduced in Android L.
+These features include heads-up notifications, visibility, people, category and priority
+metadata.
+]]>
+        </description>
+
+        <intro>
+<![CDATA[
+Android 5.0 (Lollipop, API level 21) introduced additional features to the Notification API.
+Specifically, it allows developers to specify the priority and visibility level for
+notifications. This metadata allows the system to provide enhanced security for notifications
+while the lock screen is active, allows high-priority notifications to appear even when
+the notification bar is closed, and provides users to silence low-priority notifications
+when they're busy.
+
+This metadata is provided via additional arguments to the `Notification.Builder` class.
+
+Specifically, this sample demonstrates how to generate a heads-up notification
+(`HeadsUpNotificationFragment`), how to control visibility on the lock screen
+(`VisibilityMetadataFragment`), and how to set the category, priority, and associated contact
+for a notification (`OtherMetadataFragment`).
+]]>
+        </intro>
+    </metadata>
 </sample>
