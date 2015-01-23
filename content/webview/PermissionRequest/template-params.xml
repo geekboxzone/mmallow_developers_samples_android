@@ -44,7 +44,8 @@
         <level>INTERMEDIATE</level>
         <icon>screenshots/icon_web.png</icon>
         <screenshots>
-            <img>screenshots/main.png</img>
+            <img>screenshots/image1.png</img>
+            <img>screenshots/image2.png</img>
         </screenshots>
         <api_refs>
             <android>android.webkit.PermissionRequest</android>
