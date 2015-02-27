@@ -59,7 +59,7 @@
         <!-- Values: {DRAFT | PUBLISHED | INTERNAL | DEPRECATED | SUPERCEDED} -->
         <status>PUBLISHED</status>
         <!-- See http://go/sample-categories for details on the next 4 fields. -->
-        <categories>Wearable, UI, Notification</categories>
+        <categories>Wearable, Location, Notification</categories>
         <technologies>Android</technologies>
         <languages>Java</languages>
         <solutions>Mobile</solutions>
@@ -111,8 +111,8 @@
             app that notifies the user when they are in close proximity to
             notable points of interest.
 
-            The Wear component loads a full wearable app that shows images,
-            summary information and provides quick actions for nearby tourist
+            The Wear component shows tourist attraction images and summary
+            information, and provides quick actions for nearby tourist
             attractions in a [GridViewPager](http://developer.android.com/reference/android/support/wearable/view/GridViewPager.html)
             UI component.
         </description>
