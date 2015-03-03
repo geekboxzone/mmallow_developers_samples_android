@@ -34,6 +34,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.common.Attraction;
 import com.example.android.xyztouristattractions.common.Constants;
@@ -97,6 +98,7 @@ public class DetailFragment extends Fragment {
                 * Constants.IMAGE_ANIM_MULTIPLIER;
         Glide.with(getActivity())
                 .load(mAttraction.imageUrl)
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .placeholder(R.color.lighter_gray)
                 .override(imageSize, imageSize)
                 .into(imageView);

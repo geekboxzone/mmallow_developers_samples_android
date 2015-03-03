@@ -30,7 +30,11 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.android.xyztouristattractions.R;
+import com.example.android.xyztouristattractions.common.Attraction;
+import com.example.android.xyztouristattractions.common.Constants;
+import com.example.android.xyztouristattractions.common.Utils;
 import com.example.android.xyztouristattractions.provider.TouristAttractions;
 import com.example.android.xyztouristattractions.ui.DetailActivity;
 import com.google.android.gms.common.ConnectionResult;
@@ -46,9 +50,6 @@ import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.PutDataMapRequest;
 import com.google.android.gms.wearable.PutDataRequest;
 import com.google.android.gms.wearable.Wearable;
-import com.example.android.xyztouristattractions.common.Attraction;
-import com.example.android.xyztouristattractions.common.Constants;
-import com.example.android.xyztouristattractions.common.Utils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -319,13 +320,14 @@ public class UtilityService extends IntentService {
                 Constants.MAX_ATTRACTIONS : attractions.size();
 
         // Pull down the tourist attraction images from the network and store
-        HashMap<String, Bitmap> bitmaps = new HashMap<String, Bitmap>();
+        HashMap<String, Bitmap> bitmaps = new HashMap<>();
         try {
             for (int i = 0; i < count; i++) {
                 bitmaps.put(attractions.get(i).name,
                         Glide.with(this)
                                 .load(attractions.get(i).imageUrl)
                                 .asBitmap()
+                                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                                 .into(Constants.WEAR_IMAGE_SIZE, Constants.WEAR_IMAGE_SIZE)
                                 .get());
             }
@@ -406,7 +408,7 @@ public class UtilityService extends IntentService {
         int count = attractions.size() > Constants.MAX_ATTRACTIONS ?
                 Constants.MAX_ATTRACTIONS : attractions.size();
 
-        ArrayList<DataMap> attractionsData = new ArrayList<DataMap>(count);
+        ArrayList<DataMap> attractionsData = new ArrayList<>(count);
 
         for (int i = 0; i < count; i++) {
             Attraction attraction = attractions.get(i);
@@ -419,12 +421,14 @@ public class UtilityService extends IntentService {
                 image = Glide.with(this)
                         .load(attraction.imageUrl)
                         .asBitmap()
+                        .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                         .into(Constants.WEAR_IMAGE_SIZE_PARALLAX_WIDTH, Constants.WEAR_IMAGE_SIZE)
                         .get();
 
                 secondaryImage = Glide.with(this)
                         .load(attraction.secondaryImageUrl)
                         .asBitmap()
+                        .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                         .into(Constants.WEAR_IMAGE_SIZE_PARALLAX_WIDTH, Constants.WEAR_IMAGE_SIZE)
                         .get();
             } catch (InterruptedException | ExecutionException e) {
