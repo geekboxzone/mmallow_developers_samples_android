@@ -33,6 +33,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.common.Attraction;
 import com.example.android.xyztouristattractions.common.Constants;
@@ -161,6 +162,7 @@ public class AttractionListFragment extends Fragment {
             holder.mDescriptionTextView.setText(attraction.description);
             Glide.with(mContext)
                     .load(attraction.imageUrl)
+                    .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                     .placeholder(R.drawable.empty_photo)
                     .override(mImageSize, mImageSize)
                     .into(holder.mImageView);
