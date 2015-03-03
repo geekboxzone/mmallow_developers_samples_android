@@ -203,7 +203,7 @@ public class AttractionsActivity extends Activity
             DataApi.DataItemResult dataItemResult =
                     Wearable.DataApi.getDataItem(googleApiClient, attractionsUri).await();
 
-            if (dataItemResult.getStatus().isSuccess()) {
+            if (dataItemResult.getStatus().isSuccess() && dataItemResult.getDataItem() != null) {
                 DataMapItem dataMapItem = DataMapItem.fromDataItem(dataItemResult.getDataItem());
                 List<DataMap> attractionsData =
                         dataMapItem.getDataMap().getDataMapArrayList(Constants.EXTRA_ATTRACTIONS);
