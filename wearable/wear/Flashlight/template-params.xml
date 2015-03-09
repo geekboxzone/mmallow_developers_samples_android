@@ -37,8 +37,6 @@
         </intro>
     </strings>
 
-    <template src="base"/>
+    <template src="base-build" />
     <template src="Wear"/>
-    <common src="logger"/>
-    <common src="activities"/>
 </sample>
