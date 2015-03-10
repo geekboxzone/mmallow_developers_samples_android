@@ -22,13 +22,12 @@
     <group>Wearable</group>
     <package>com.example.android.wearable.geofencing</package>
 
-
-
-    <!-- change minSdk if needed-->
     <minSdk>18</minSdk>
-
     <dependency>com.google.android.gms:play-services-location:6.5.+</dependency>
 
+    <wearable>
+        <has_handheld_app>true</has_handheld_app>
+    </wearable>
 
     <strings>
         <intro>

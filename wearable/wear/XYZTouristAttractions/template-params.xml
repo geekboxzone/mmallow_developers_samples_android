@@ -20,6 +20,10 @@
     <package>com.example.android.xyztouristattractions</package>
     <minSdk>18</minSdk>
 
+    <wearable>
+        <has_handheld_app>true</has_handheld_app>
+    </wearable>
+
     <dependency>com.android.support:appcompat-v7:21.0.3</dependency>
     <dependency>com.google.android.gms:play-services-wearable:6.5.+</dependency>
     <dependency>com.google.android.gms:play-services-location:6.5.+</dependency>
