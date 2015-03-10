@@ -22,13 +22,13 @@
     <group>Wearable</group>
     <package>com.example.android.wearable.watchface</package>
 
-
-
-    <!-- change minSdk if needed-->
     <minSdk>18</minSdk>
 
     <dependency>com.google.android.support:wearable:1.1.+</dependency>
 
+    <wearable>
+        <has_handheld_app>true</has_handheld_app>
+    </wearable>
 
     <strings>
         <intro>
