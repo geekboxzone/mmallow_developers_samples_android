@@ -18,8 +18,13 @@
     <name>SkeletonWearableApp</name>
     <group>Wearable</group>
     <package>com.example.android.google.wearable.app</package>
-    <!-- change minSdk if needed-->
+
     <minSdk>18</minSdk>
+
+    <wearable>
+        <has_handheld_app>true</has_handheld_app>
+    </wearable>
+
     <strings>
         <intro>
             <![CDATA[
