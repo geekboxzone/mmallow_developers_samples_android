@@ -24,10 +24,6 @@
 
     <minSdk>18</minSdk>
 
-    <wearable>
-        <has_handheld_app>true</has_handheld_app>
-    </wearable>
-
     <strings>
         <intro>
             <![CDATA[
