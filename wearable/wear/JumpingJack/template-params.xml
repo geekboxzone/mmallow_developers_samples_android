@@ -24,10 +24,6 @@
 
     <minSdk>18</minSdk>
 
-    <wearable>
-        <has_handheld_app>true</has_handheld_app>
-    </wearable>
-
     <strings>
         <intro>
             <![CDATA[
@@ -36,7 +32,7 @@
         </intro>
     </strings>
 
-    <template src="base"/>
+    <template src="base-build"/>
     <template src="Wear"/>
     <common src="logger"/>
     <common src="activities"/>
