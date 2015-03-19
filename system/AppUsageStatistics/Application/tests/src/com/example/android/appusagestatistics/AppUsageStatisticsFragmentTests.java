@@ -31,6 +31,7 @@ public class AppUsageStatisticsFragmentTests
         extends ActivityInstrumentationTestCase2<AppUsageStatisticsActivity> {
 
     private AppUsageStatisticsActivity mTestActivity;
+
     private AppUsageStatisticsFragment mTestFragment;
 
     public AppUsageStatisticsFragmentTests() {
@@ -81,10 +82,14 @@ public class AppUsageStatisticsFragmentTests
     }
 
     public void testUpdateAppsList() {
-        List<UsageStats> usageStatsList = mTestFragment
+        final List<UsageStats> usageStatsList = mTestFragment
                 .getUsageStatistics(UsageStatsManager.INTERVAL_DAILY);
-
-        mTestFragment.updateAppsList(usageStatsList);
+        mTestActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mTestFragment.updateAppsList(usageStatsList);
+            }
+        });
         getInstrumentation().waitForIdleSync();
 
         // The result depends on if the app is granted the access to App usage statistics.
