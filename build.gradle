@@ -36,6 +36,7 @@ List<String> samples = [
 "renderScript/RenderScriptIntrinsic",
 "ui/views/SlidingTabs/SlidingTabsBasic",
 "ui/views/SlidingTabs/SlidingTabsColors",
+"connectivity/nfc/BeamLargeFiles",
 "connectivity/nfc/CardEmulation",
 "connectivity/nfc/CardReader",
 "sensors/BatchStepSensor",
