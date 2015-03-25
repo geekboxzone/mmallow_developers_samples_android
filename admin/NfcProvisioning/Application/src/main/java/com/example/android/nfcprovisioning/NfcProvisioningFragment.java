@@ -94,7 +94,9 @@ public class NfcProvisioningFragment extends Fragment implements
         super.onStart();
         Activity activity = getActivity();
         NfcAdapter adapter = NfcAdapter.getDefaultAdapter(activity);
-        adapter.setNdefPushMessageCallback(this, activity);
+        if (adapter != null) {
+            adapter.setNdefPushMessageCallback(this, activity);
+        }
         getLoaderManager().initLoader(LOADER_PROVISIONING_VALUES, null, this);
     }
 
