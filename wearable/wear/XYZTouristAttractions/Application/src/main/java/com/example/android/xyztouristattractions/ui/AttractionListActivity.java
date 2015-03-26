@@ -16,6 +16,7 @@
 
 package com.example.android.xyztouristattractions.ui;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -67,9 +68,13 @@ public class AttractionListActivity extends ActionBarActivity {
         switch (item.getItemId()) {
             case R.id.test_notification:
                 UtilityService.triggerWearTest(this, false);
+                showDebugDialog(R.string.action_test_notification,
+                        R.string.action_test_notification_dialog);
                 return true;
             case R.id.test_microapp:
                 UtilityService.triggerWearTest(this, true);
+                showDebugDialog(R.string.action_test_microapp,
+                        R.string.action_test_microapp_dialog);
                 return true;
             case R.id.test_toggle_geofence:
                 boolean geofenceEnabled = Utils.getGeofenceEnabled(this);
@@ -80,5 +85,17 @@ public class AttractionListActivity extends ActionBarActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Show a basic debug dialog to provide more info on the built-in debug
+     * options.
+     */
+    private void showDebugDialog(int titleResId, int bodyResId) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setTitle(titleResId)
+                .setMessage(bodyResId)
+                .setPositiveButton(android.R.string.ok, null);
+        builder.create().show();
     }
 }
