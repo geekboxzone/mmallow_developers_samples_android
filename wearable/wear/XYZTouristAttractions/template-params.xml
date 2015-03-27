@@ -15,7 +15,7 @@
  limitations under the License.
 -->
 <sample>
-    <name>XYZ Tourist Attractions</name>
+    <name>XYZTouristAttractions</name>
     <group>Wearable</group>
     <package>com.example.android.xyztouristattractions</package>
     <minSdk>18</minSdk>
@@ -25,12 +25,10 @@
     </wearable>
 
     <dependency>com.android.support:appcompat-v7:21.0.3</dependency>
-    <dependency>com.google.android.gms:play-services-wearable:6.5.+</dependency>
     <dependency>com.google.android.gms:play-services-location:6.5.+</dependency>
     <dependency>com.google.maps.android:android-maps-utils:0.3.2</dependency>
-    <dependency>com.github.bumptech.glide:glide:3.5.1</dependency>
+    <dependency>com.github.bumptech.glide:glide:3.5.2</dependency>
     <dependency>com.android.support:recyclerview-v7:21.0.0</dependency>
-    <dependency_wearable>com.google.android.gms:play-services-wearable:6.5.+</dependency_wearable>
     <dependency_wearable>com.google.android.gms:play-services-location:6.5.+</dependency_wearable>
     <dependency_wearable>com.google.android.support:wearable:1.1.0</dependency_wearable>
     <dependency_shared>com.google.android.gms:play-services-wearable:6.5.+</dependency_shared>
@@ -39,20 +37,20 @@
 
     <strings>
         <intro>
-            <![CDATA[
-            This sample aims to be as close to a real world example of a mobile
-            and Wear app combination as possible. It has a more refined design
-            and also provides a practical example of how a mobile app would
-            interact and communicate with its wear counterpart.
+<![CDATA[
+This sample aims to be as close to a real world example of a mobile
+and Wear app combination as possible. It has a more refined design
+and also provides a practical example of how a mobile app would
+interact and communicate with its wear counterpart.
 
-            The app itself is modeled after a hypothetical tourist attractions
-            app that notifies the user when they are in close proximity to
-            notable points of interest.
+The app itself is modeled after a hypothetical tourist attractions
+app that notifies the user when they are in close proximity to
+notable points of interest.
 
-            The Wear component loads a full wearable app that shows images,
-            summary information and provides quick actions for nearby tourist
-            attractions in a GridViewPager UI component.
-            ]]>
+The Wear component loads a full wearable app that shows images,
+summary information and provides quick actions for nearby tourist
+attractions in a GridViewPager UI component.
+]]>
         </intro>
     </strings>
 
@@ -106,19 +104,19 @@
             Avoid simply rearranging the sample's title. What does this sample actually
             accomplish, and how does it do it? -->
         <description>
-            This sample aims to be as close to a real world example of a mobile
-            and Wear app combination as possible. It has a more refined design
-            and also provides a practical example of how a mobile app would
-            interact and communicate with its wear counterpart.
+This sample aims to be as close to a real world example of a mobile
+and Wear app combination as possible. It has a more refined design
+and also provides a practical example of how a mobile app would
+interact and communicate with its wear counterpart.
 
-            The app itself is modeled after a hypothetical tourist attractions
-            app that notifies the user when they are in close proximity to
-            notable points of interest.
+The app itself is modeled after a hypothetical tourist attractions
+app that notifies the user when they are in close proximity to
+notable points of interest.
 
-            The Wear component shows tourist attraction images and summary
-            information, and provides quick actions for nearby tourist
-            attractions in a [GridViewPager](http://developer.android.com/reference/android/support/wearable/view/GridViewPager.html)
-            UI component.
+The Wear component shows tourist attraction images and summary
+information, and provides quick actions for nearby tourist
+attractions in a [GridViewPager](http://developer.android.com/reference/android/support/wearable/view/GridViewPager.html)
+UI component.
         </description>
 
         <!-- Multi-paragraph introduction to sample, from an educational point-of-view.
@@ -126,15 +124,18 @@
         sample on DAC. -->
         <intro>
 <![CDATA[
-Getting started with this sample:
-* Compile and install the mobile app onto your handset or emulator
-* Compile and install the wearable app onto your Wear device or emulator
+Steps for trying out this sample:
+* Compile and install the mobile app onto your mobile device or emulator.
+* Compile and install the wearable app onto your Wear device or emulator.
 (**Note:** wearable apps are not automatically pushed from your mobile device
-unless you build a production release, see [here][22] for more info)
+unless you build a production release, see [here][22] for more info).
 * Start the mobile app and use the overflow menu options to test either a
-notification enhanced for Wear, or the full Wearable application (unless
+notification enhanced for Wear, or the full wearable application (unless
 you're physically in Sydney in which case the geofence should trigger
-automatically)
+automatically). Note that the first time you trigger either the notification
+or the wearable app it may take 20-30 seconds to show up as it needs to
+transfer the image assets to the wearable (in practice this delay won't be
+noticeable to users as they will only be notified once the data has been sent).
 
 This sample aims to demonstrate a number of different Android APIs and concepts
 relating to [Android Wear][1] and location using [Google Play Services][2]:
