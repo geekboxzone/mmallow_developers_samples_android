@@ -41,10 +41,8 @@ List<String> samples = [
 "connectivity/nfc/CardReader",
 "sensors/BatchStepSensor",
 "ui/graphics/DisplayingBitmaps",
-"ui/transition/AdapterTransition",
 "ui/transition/BasicTransition",
 "ui/transition/CustomTransition",
-"ui/transition/FragmentTransition",
 "ui/views/SwipeRefreshLayout/SwipeRefreshLayoutBasic",
 "ui/views/SwipeRefreshLayout/SwipeRefreshListFragment",
 "ui/views/SwipeRefreshLayout/SwipeRefreshMultipleViews",
@@ -78,7 +76,6 @@ List<String> samples = [
 "wearable/wear/DataLayer",
 "wearable/wear/DelayedConfirmation",
 "wearable/wear/ElizaChat",
-"wearable/wear/EmbeddedApp",
 "wearable/wear/FindMyPhone",
 "wearable/wear/Flashlight",
 "wearable/wear/Geofencing",
@@ -97,6 +94,9 @@ List<String> samples = [
 "content/documentsUi/DirectorySelection",
 "system/AppUsageStatistics",
 "media/ScreenCapture",
+"admin/NfcProvisioning",
+"admin/DeviceOwner",
+"wearable/wear/XYZTouristAttractions",
 ]
 
 List<String> taskNames = [
@@ -121,4 +121,3 @@ taskNames.each { taskName ->
         })
     }
 }
-
