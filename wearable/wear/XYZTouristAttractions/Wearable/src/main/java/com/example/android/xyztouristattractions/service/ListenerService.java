@@ -112,7 +112,7 @@ public class ListenerService extends WearableListenerService {
         Notification notification = new Notification.Builder(this)
                 .setContentText(getResources().getQuantityString(
                         R.plurals.attractions_found, count, count))
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setDeleteIntent(deletePendingIntent)
                 .addAction(R.drawable.ic_full_explore,
                         getString(R.string.action_explore),
