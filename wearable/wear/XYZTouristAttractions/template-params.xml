@@ -24,11 +24,11 @@
         <has_handheld_app>true</has_handheld_app>
     </wearable>
 
-    <dependency>com.android.support:appcompat-v7:21.0.3</dependency>
+    <dependency>com.android.support:appcompat-v7:22.1.1</dependency>
     <dependency>com.google.android.gms:play-services-location:7.3.0</dependency>
     <dependency>com.google.maps.android:android-maps-utils:0.3.2</dependency>
     <dependency>com.github.bumptech.glide:glide:3.5.2</dependency>
-    <dependency>com.android.support:recyclerview-v7:21.0.0</dependency>
+    <dependency>com.android.support:recyclerview-v7:22.1.1</dependency>
     <dependency_wearable>com.google.android.gms:play-services-location:7.3.0</dependency_wearable>
     <dependency_shared>com.google.android.gms:play-services-wearable:7.3.0</dependency_shared>
     <dependency_shared>com.google.android.gms:play-services-location:7.3.0</dependency_shared>
@@ -96,6 +96,7 @@ attractions in a GridViewPager UI component.
             <android>android.support.wearable.view.CardScrollView</android>
             <android>android.support.wearable.view.GridPagerAdapter</android>
             <android>android.support.wearable.view.WatchViewStub</android>
+            <android>android.support.wearable.view.ActionPage</android>
         </api_refs>
 
         <!-- 1-3 line description of the sample here.
