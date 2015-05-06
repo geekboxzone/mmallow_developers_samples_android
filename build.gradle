@@ -97,6 +97,7 @@ List<String> samples = [
 "admin/NfcProvisioning",
 "admin/DeviceOwner",
 "wearable/wear/XYZTouristAttractions",
+"connectivity/bluetooth/BluetoothAdvertisements",
 ]
 
 List<String> taskNames = [
