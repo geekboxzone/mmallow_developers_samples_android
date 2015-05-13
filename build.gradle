@@ -98,6 +98,7 @@ List<String> samples = [
 "admin/DeviceOwner",
 "wearable/wear/XYZTouristAttractions",
 "connectivity/bluetooth/BluetoothAdvertisements",
+"wearable/wear/AlwaysOn",
 ]
 
 List<String> taskNames = [
