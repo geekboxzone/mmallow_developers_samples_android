@@ -18,7 +18,7 @@
     <name>MediaRecorder</name>
     <group>Media</group>
     <package>com.example.android.mediarecorder</package>
-    <minSdk>14</minSdk>
+    <minSdk>16</minSdk>
     <strings>
         <intro>
 <![CDATA[
