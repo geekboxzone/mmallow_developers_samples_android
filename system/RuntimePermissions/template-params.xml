@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright 2015 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<sample>
+    <name>RuntimePermissions</name>
+    <group>System</group>
+    <package>com.example.android.system.runtimepermissions</package>
+
+    <minSdk>"MNC"</minSdk>
+    <targetSdkVersion>"MNC"</targetSdkVersion>
+    <compileSdkVersion>"android-MNC"</compileSdkVersion>
+
+
+    <dependency>com.android.support:appcompat-v7:21.+</dependency>
+
+    <strings>
+        <intro>
+            <![CDATA[
+            This sample shows runtime permissions available in the Android M and above.
+            Display the log to follow the execution.
+            If executed on an Android M device, an additional option to access contacts is shown.
+            ]]>
+        </intro>
+    </strings>
+
+    <template src="base"/>
+    <common src="logger"/>
+    <common src="activities"/>
+
+    <metadata>
+        <status>PUBLISHED</status>
+        <categories>System</categories>
+        <technologies>Android</technologies>
+        <languages>Java</languages>
+        <solutions>Mobile</solutions>
+        <level>BEGINNER</level>
+        <icon>screenshots/big_icon.png</icon>
+        <screenshots>
+            <img>screenshots/screenshot-1.png</img>
+            <img>screenshots/screenshot-2.png</img>
+        </screenshots>
+        <api_refs>
+            <android>android.app.Activity</android>
+            <android>android.Manifest.permission</android>
+        </api_refs>
+
+        <description>
+<![CDATA[
+This sample shows runtime permissions available in the Android M and above.
+It shows how to check and request permissions at runtime and how to declare permissions for M-devices
+only.
+]]>
+        </description>
+
+        <intro>
+<![CDATA[
+Android M introduced runtime permissions. Applications targeting M and above need to request their
+permissions at runtime.
+All permissions still need to be declared in the AndroidManifest. However, when accessing APIs that
+require a permission, the Activity or Fragment has to verify that the permission has been granted
+or request the missing permissions. Permissions are checked through
+Activity#requestPermissions(String[], int) and Fragment#requestPermissions(String[], int).
+Permission requests are sent through Activity#requestPermissions(String[]), and the response
+received in the callback Activity#onRequestPermissionsResult(int, permissions[], int[]).
+
+If an application targets an SDK below M, all permissions are granted at runtime and are available
+when the application is running. However, if permissions have been turned off in the system settings
+for an application targeting an SDK below M, the API will return empty or no data.
+]]>
+        </intro>
+    </metadata>
+</sample>
