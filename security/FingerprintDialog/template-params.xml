@@ -24,7 +24,8 @@
     <group>security</group>
     <package>com.example.android.fingerprintdialog</package>
 
-    <minSdk>"android-MNC"</minSdk>
+    <minSdk>"MNC"</minSdk>
+    <targetSdkVersion>"MNC"</targetSdkVersion>
     <compileSdkVersion>"android-MNC"</compileSdkVersion>
 
     <dependency>com.squareup.dagger:dagger:1.2.2</dependency>

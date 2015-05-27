@@ -24,8 +24,8 @@
     <group>security</group>
     <package>com.example.android.confirmcredential</package>
 
-    <!-- change minSdk if needed-->
-    <minSdk>"android-MNC"</minSdk>
+    <minSdk>"MNC"</minSdk>
+    <targetSdkVersion>"MNC"</targetSdkVersion>
     <compileSdkVersion>"android-MNC"</compileSdkVersion>
 
     <strings>

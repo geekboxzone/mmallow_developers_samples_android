@@ -20,8 +20,8 @@
                             and replaced with the "categories" tags below. -->
     <package>com.example.android.activenotifications</package>
 
-    <!-- change minSdk if needed-->
-    <minSdk>"android-MNC"</minSdk>
+    <minSdk>"MNC"</minSdk>
+    <targetSdkVersion>"MNC"</targetSdkVersion>
     <compileSdkVersion>"android-MNC"</compileSdkVersion>
 
     <!-- Include additional dependencies here.-->
