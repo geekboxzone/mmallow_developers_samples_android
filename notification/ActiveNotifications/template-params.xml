@@ -18,7 +18,7 @@
     <name>ActiveNotification</name>
     <group>Notification</group>  <!-- This field will be deprecated in the future
                             and replaced with the "categories" tags below. -->
-    <package>com.example.android.activenotification</package>
+    <package>com.example.android.activenotifications</package>
 
     <!-- change minSdk if needed-->
     <minSdk>"android-MNC"</minSdk>

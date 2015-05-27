@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.activenotification;
+package com.example.android.activenotifications;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,7 +28,7 @@ public class ActiveNotificationActivity extends MainActivity {
     private ActiveNotificationFragment mFragment;
 
     protected static final String ACTION_NOTIFICATION_DELETE
-            = "com.example.android.activenotification.delete";
+            = "com.example.android.activenotifications.delete";
 
     private BroadcastReceiver mDeleteReceiver = new BroadcastReceiver() {
         @Override
