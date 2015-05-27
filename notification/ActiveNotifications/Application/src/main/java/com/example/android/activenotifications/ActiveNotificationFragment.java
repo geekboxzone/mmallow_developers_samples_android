@@ -1,4 +1,4 @@
-package com.example.android.activenotification;
+package com.example.android.activenotifications;
 /*
 * Copyright 2015 The Android Open Source Project
 *

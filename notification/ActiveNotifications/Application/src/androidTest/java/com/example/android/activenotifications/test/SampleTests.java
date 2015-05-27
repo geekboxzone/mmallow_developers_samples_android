@@ -28,9 +28,9 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.example.android.activenotification.test;
+package com.example.android.activenotifications.test;
 
-import com.example.android.activenotification.*;
+import com.example.android.activenotifications.*;
 
 import android.test.ActivityInstrumentationTestCase2;
 
