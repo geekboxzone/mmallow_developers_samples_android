@@ -99,6 +99,13 @@ List<String> samples = [
 "wearable/wear/XYZTouristAttractions",
 "connectivity/bluetooth/BluetoothAdvertisements",
 "wearable/wear/AlwaysOn",
+"security/ConfirmCredential",
+"security/FingerprintDialog",
+"system/RuntimePermissions",
+"system/RuntimePermissionsBasic",
+"notification/ActiveNotifications",
+"media/Camera2Raw",
+"content/AutoBackupForApps",
 ]
 
 List<String> taskNames = [

@@ -38,7 +38,7 @@ Note: The "RuntimePermissions" sample provides a more complete overview over the
     <template src="base"/>
 
     <metadata>
-        <status>PUBLISHED</status>
+        <status>DRAFT</status>
         <categories>System</categories>
         <technologies>Android</technologies>
         <languages>Java</languages>

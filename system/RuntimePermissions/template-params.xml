@@ -41,7 +41,7 @@
     <common src="activities"/>
 
     <metadata>
-        <status>PUBLISHED</status>
+        <status>DRAFT</status>
         <categories>System</categories>
         <technologies>Android</technologies>
         <languages>Java</languages>
