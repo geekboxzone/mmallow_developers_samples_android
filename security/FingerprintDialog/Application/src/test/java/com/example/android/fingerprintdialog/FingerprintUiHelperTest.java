@@ -59,8 +59,8 @@ public class FingerprintUiHelperTest {
     public void testStartListening_fingerprintAuthAvailable() {
         mFingerprintUiHelper.startListening(mockCryptoObject);
 
-        verify(mockFingerprintManager).authenticate(eq(mockCryptoObject),
-                isA(CancellationSignal.class), eq(mFingerprintUiHelper), eq(0));
+        verify(mockFingerprintManager).authenticate(eq(mockCryptoObject), eq(0),
+                isA(CancellationSignal.class), eq(mFingerprintUiHelper), any(Handler.class));
         verify(mockIcon).setImageResource(R.drawable.ic_fp_40px);
     }
 
@@ -71,8 +71,8 @@ public class FingerprintUiHelperTest {
         mFingerprintUiHelper.startListening(mockCryptoObject);
 
         verify(mockFingerprintManager, never()).authenticate(
-                any(FingerprintManager.CryptoObject.class),
-                any(CancellationSignal.class), any(FingerprintUiHelper.class), eq(0));
+                any(FingerprintManager.CryptoObject.class), eq(0),
+                any(CancellationSignal.class), any(FingerprintUiHelper.class), any(Handler.class));
     }
 
     @Test
