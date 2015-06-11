@@ -24,15 +24,16 @@
         <has_handheld_app>true</has_handheld_app>
     </wearable>
 
-    <dependency>com.android.support:appcompat-v7:22.1.1</dependency>
-    <dependency>com.google.android.gms:play-services-location:7.3.0</dependency>
-    <dependency>com.google.maps.android:android-maps-utils:0.3.2</dependency>
-    <dependency>com.github.bumptech.glide:glide:3.5.2</dependency>
-    <dependency>com.android.support:recyclerview-v7:22.1.1</dependency>
-    <dependency_wearable>com.google.android.gms:play-services-location:7.3.0</dependency_wearable>
-    <dependency_shared>com.google.android.gms:play-services-wearable:7.3.0</dependency_shared>
-    <dependency_shared>com.google.android.gms:play-services-location:7.3.0</dependency_shared>
-    <dependency_shared>com.google.maps.android:android-maps-utils:0.3.2</dependency_shared>
+    <dependency>com.google.android.gms:play-services-location</dependency>
+    <dependency>com.google.maps.android:android-maps-utils:0.3.4</dependency>
+    <dependency>com.github.bumptech.glide:glide:3.6.0</dependency>
+    <dependency>com.android.support:appcompat-v7:22.2.0</dependency>
+    <dependency>com.android.support:recyclerview-v7:22.2.0</dependency>
+    <dependency>com.android.support:design:22.2.0</dependency>
+    <dependency_wearable>com.google.android.gms:play-services-location</dependency_wearable>
+    <dependency_shared>com.google.android.gms:play-services-wearable</dependency_shared>
+    <dependency_shared>com.google.android.gms:play-services-location</dependency_shared>
+    <dependency_shared>com.google.maps.android:android-maps-utils:0.3.4</dependency_shared>
 
     <strings>
         <intro>
