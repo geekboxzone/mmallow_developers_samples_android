@@ -61,6 +61,7 @@ before proceeding some actions such as purchasing an item.
             <img>screenshots/1-purchase-screen.png</img>
             <img>screenshots/2-fingerprint-dialog.png</img>
             <img>screenshots/3-fingerprint-authenticated.png</img>
+            <img>screenshots/4-new-fingerprint-enrolled.png</img>
         </screenshots>
 
         <api_refs>

@@ -12,6 +12,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.CancellationSignal;
+import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -59,8 +60,9 @@ public class FingerprintUiHelperTest {
     public void testStartListening_fingerprintAuthAvailable() {
         mFingerprintUiHelper.startListening(mockCryptoObject);
 
-        verify(mockFingerprintManager).authenticate(eq(mockCryptoObject), eq(0),
-                isA(CancellationSignal.class), eq(mFingerprintUiHelper), any(Handler.class));
+        verify(mockFingerprintManager).authenticate(eq(mockCryptoObject),
+                isA(CancellationSignal.class), eq(0), eq(mFingerprintUiHelper),
+                any(Handler.class));
         verify(mockIcon).setImageResource(R.drawable.ic_fp_40px);
     }
 
@@ -71,8 +73,8 @@ public class FingerprintUiHelperTest {
         mFingerprintUiHelper.startListening(mockCryptoObject);
 
         verify(mockFingerprintManager, never()).authenticate(
-                any(FingerprintManager.CryptoObject.class), eq(0),
-                any(CancellationSignal.class), any(FingerprintUiHelper.class), any(Handler.class));
+                any(FingerprintManager.CryptoObject.class), any(CancellationSignal.class), eq(0),
+                any(FingerprintUiHelper.class), any(Handler.class));
     }
 
     @Test
