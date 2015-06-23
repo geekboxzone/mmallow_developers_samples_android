@@ -152,7 +152,6 @@ public class MainActivity extends Activity implements ConnectionCallbacks,
         LOGD(TAG, "onDataChanged(): " + dataEvents);
 
         final List<DataEvent> events = FreezableUtils.freezeIterable(dataEvents);
-        dataEvents.close();
         for (DataEvent event : events) {
             if (event.getType() == DataEvent.TYPE_CHANGED) {
                 String path = event.getDataItem().getUri().getPath();
