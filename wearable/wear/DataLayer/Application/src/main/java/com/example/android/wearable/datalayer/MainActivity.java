@@ -217,7 +217,6 @@ public class MainActivity extends Activity implements DataApi.DataListener,
     public void onDataChanged(DataEventBuffer dataEvents) {
         LOGD(TAG, "onDataChanged: " + dataEvents);
         final List<DataEvent> events = FreezableUtils.freezeIterable(dataEvents);
-        dataEvents.close();
         runOnUiThread(new Runnable() {
             @Override
             public void run() {

@@ -60,7 +60,6 @@ public class DataLayerListenerService extends WearableListenerService {
     public void onDataChanged(DataEventBuffer dataEvents) {
         LOGD(TAG, "onDataChanged: " + dataEvents);
         final List<DataEvent> events = FreezableUtils.freezeIterable(dataEvents);
-        dataEvents.close();
         if (!mGoogleApiClient.isConnected() || !mGoogleApiClient.isConnecting()) {
             ConnectionResult connectionResult = mGoogleApiClient
                     .blockingConnect(30, TimeUnit.SECONDS);
