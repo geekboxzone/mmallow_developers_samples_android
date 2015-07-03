@@ -96,7 +96,11 @@ public class MainActivity extends Activity {
                         Toast.LENGTH_LONG).show();
                 purchaseButton.setEnabled(false);
             }
-            createKey();
+            if (!createKey()) {
+                purchaseButton.setEnabled(false);
+                return;
+            }
+            purchaseButton.setEnabled(true);
             purchaseButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -197,8 +201,11 @@ public class MainActivity extends Activity {
     /**
      * Creates a symmetric key in the Android Key Store which can only be used after the user has
      * authenticated with fingerprint.
+     *
+     * @return {@code true} if key is created successful, {@code false} otherwise such as when no
+     * fingerprints are registered.
      */
-    public void createKey() {
+    public boolean createKey() {
         // The enrolling flow for fingerprint. This is where you ask the user to set up fingerprint
         // for your flow. Use of keys is necessary if you need to know if the set of
         // enrolled fingerprints has changed.
@@ -216,6 +223,13 @@ public class MainActivity extends Activity {
                     .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_PKCS7)
                     .build());
             mKeyGenerator.generateKey();
+            return true;
+        } catch (IllegalStateException e) {
+            // This happens when no fingerprints are registered.
+            Toast.makeText(this,
+                    "Go to 'Settings -> Security -> Fingerprint' and register at least one fingerprint",
+                    Toast.LENGTH_LONG).show();
+            return false;
         } catch (NoSuchAlgorithmException | InvalidAlgorithmParameterException
                 | CertificateException | IOException e) {
             throw new RuntimeException(e);
