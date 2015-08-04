@@ -15,8 +15,6 @@
  limitations under the License.
 -->
 <resources>
-    <string name="app_name">MidiScope</string>
-
     <string name="header_text">Select a MIDI source from the Spinner above or send messages to MidiScope.</string>
     <string name="clear_log">Clear Log</string>
     <string name="keep_screen_on">Keep Screen On</string>

@@ -31,6 +31,7 @@ attached input device.
     </strings>
 
     <common src="midi"/>
+    <template src="base"/>
 
     <metadata>
         <status>PUBLISHED</status>
