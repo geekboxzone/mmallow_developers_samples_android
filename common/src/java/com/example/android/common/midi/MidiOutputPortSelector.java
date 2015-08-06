@@ -32,10 +32,7 @@ import java.io.IOException;
  * Manages a Spinner for selecting a MidiOutputPort.
  */
 public class MidiOutputPortSelector extends MidiPortSelector {
-
-    private static final String TAG = "MidiOutputPortSelector";
-
-    private MidiOutputPort mSender;
+    private MidiOutputPort mOutputPort;
     private MidiDispatcher mDispatcher = new MidiDispatcher();
     private MidiDevice mOpenDevice;
 
@@ -46,13 +43,13 @@ public class MidiOutputPortSelector extends MidiPortSelector {
      */
     public MidiOutputPortSelector(MidiManager midiManager, Activity activity,
             int spinnerId) {
-        super(midiManager, activity, spinnerId, TYPE_OUTPUT);
+        super(midiManager, activity, spinnerId, MidiDeviceInfo.PortInfo.TYPE_OUTPUT);
     }
 
     @Override
     public void onPortSelected(final MidiPortWrapper wrapper) {
-        Log.i(TAG, "onPortSelected: " + wrapper);
-        onClose();
+        Log.i(MidiConstants.TAG, "onPortSelected: " + wrapper);
+        close();
 
         final MidiDeviceInfo info = wrapper.getDeviceInfo();
         if (info != null) {
@@ -61,35 +58,36 @@ public class MidiOutputPortSelector extends MidiPortSelector {
                     @Override
                 public void onDeviceOpened(MidiDevice device) {
                     if (device == null) {
-                        Log.e(TAG, "could not open " + info);
+                        Log.e(MidiConstants.TAG, "could not open " + info);
                     } else {
                         mOpenDevice = device;
-                        mSender = device.openOutputPort(wrapper.getPortIndex());
-                        if (mSender == null) {
-                            Log.e(TAG,
-                                    "could not get sender for " + info);
+                        mOutputPort = device.openOutputPort(wrapper.getPortIndex());
+                        if (mOutputPort == null) {
+                            Log.e(MidiConstants.TAG,
+                                    "could not open output port for " + info);
                             return;
                         }
-                        mSender.connect(mDispatcher);
+                        mOutputPort.connect(mDispatcher);
                     }
                 }
-            }, new Handler(Looper.getMainLooper()));
+            }, null);
+            // Don't run the callback on the UI thread because openOutputPort might take a while.
         }
     }
 
     @Override
     public void onClose() {
         try {
-            if (mSender != null) {
-                mSender.disconnect(mDispatcher);
+            if (mOutputPort != null) {
+                mOutputPort.disconnect(mDispatcher);
             }
-            mSender = null;
+            mOutputPort = null;
             if (mOpenDevice != null) {
                 mOpenDevice.close();
             }
             mOpenDevice = null;
         } catch (IOException e) {
-            Log.e(TAG, "cleanup failed", e);
+            Log.e(MidiConstants.TAG, "cleanup failed", e);
         }
     }
 
