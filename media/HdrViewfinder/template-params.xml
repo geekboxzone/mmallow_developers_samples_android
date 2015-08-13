@@ -20,6 +20,8 @@
     <package>com.example.android.hdrviewfinder</package>
 
     <minSdk>21</minSdk>
+    <targetSdkVersion>23</targetSdkVersion>
+    <compileSdkVersion>23</compileSdkVersion>
 
     <strings>
         <intro>
