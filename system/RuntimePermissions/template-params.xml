@@ -19,10 +19,7 @@
     <group>System</group>
     <package>com.example.android.system.runtimepermissions</package>
 
-    <minSdk>"MNC"</minSdk>
-    <targetSdkVersion>"MNC"</targetSdkVersion>
-    <compileSdkVersion>"android-MNC"</compileSdkVersion>
-
+    <minSdk>23</minSdk>
 
     <dependency>com.android.support:appcompat-v7:21.+</dependency>
 

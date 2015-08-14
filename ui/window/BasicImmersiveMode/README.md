@@ -1,3 +1,4 @@
+
 Android BasicImmersiveMode Sample
 ===================================
 
@@ -18,8 +19,8 @@ SYSTEM_UI_FLAG_IMMERSIVE system ui flag. When combined with the SYSTEM_UI_FLAG_H
 Pre-requisites
 --------------
 
-- Android SDK v21
-- Android Build Tools v21.1.1
+- Android SDK v23
+- Android Build Tools v22.0.1
 - Android Support Repository
 
 Screenshots

@@ -20,9 +20,7 @@
                             and replaced with the "categories" tags below. -->
     <package>com.example.android.activenotifications</package>
 
-    <minSdk>"MNC"</minSdk>
-    <targetSdkVersion>"MNC"</targetSdkVersion>
-    <compileSdkVersion>"android-MNC"</compileSdkVersion>
+    <minSdk>23</minSdk>
 
     <!-- Include additional dependencies here.-->
     <!-- dependency>com.google.android.gms:play-services:5.0.+</dependency -->

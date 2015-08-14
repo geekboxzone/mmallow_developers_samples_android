@@ -18,8 +18,7 @@
     <name>MidiScope</name>
     <group>Media</group>
     <package>com.example.android.midiscope</package>
-    <minSdk>'MNC'</minSdk>
-    <compileSdkVersion>'android-MNC'</compileSdkVersion>
+    <minSdk>23</minSdk>
 
     <strings>
         <intro>
