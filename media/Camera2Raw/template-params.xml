@@ -19,8 +19,10 @@
     <name>Camera2Raw</name>
     <group>Media</group>
     <package>com.example.android.camera2raw</package>
+
+    <dependency>com.android.support:appcompat-v7:23.0.0</dependency>
     <minSdk>21</minSdk>
-    <targetSdkVersion>22</targetSdkVersion>
+
     <strings>
         <intro>
             <![CDATA[
