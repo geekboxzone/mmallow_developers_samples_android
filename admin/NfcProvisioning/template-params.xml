@@ -20,6 +20,7 @@
     <package>com.example.android.nfcprovisioning</package>
 
     <minSdk>21</minSdk>
+    <compileSdkVersion>22</compileSdkVersion>
 
     <strings>
         <intro>

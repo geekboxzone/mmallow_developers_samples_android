@@ -23,6 +23,7 @@
     <package>com.example.android.wearable.recipeassistant</package>
 
     <minSdk>18</minSdk>
+    <compileSdkVersion>22</compileSdkVersion>
 
     <strings>
         <intro>

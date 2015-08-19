@@ -23,6 +23,8 @@
     <package>com.example.android.wearable.geofencing</package>
 
     <minSdk>18</minSdk>
+    <compileSdkVersion>22</compileSdkVersion>
+
     <dependency>com.google.android.gms:play-services-location:7.3.0</dependency>
 
     <wearable>

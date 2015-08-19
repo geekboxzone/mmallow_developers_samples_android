@@ -22,7 +22,7 @@
     <group>Media</group>
     <package>com.example.android.camera2basic</package>
     <minSdk>21</minSdk>
-    <compileSdkVersion>21</compileSdkVersion>
+    <compileSdkVersion>22</compileSdkVersion>
     <strings>
         <intro>
             <![CDATA[

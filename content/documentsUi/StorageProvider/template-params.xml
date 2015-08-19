@@ -24,6 +24,7 @@
 
     <!-- change minSdk if needed-->
     <minSdk>19</minSdk>
+    <compileSdkVersion>22</compileSdkVersion>
 
     <strings>
         <intro>
