@@ -23,6 +23,8 @@
     <targetSdkVersion>23</targetSdkVersion>
     <compileSdkVersion>23</compileSdkVersion>
 
+    <dependency>com.android.support:design:23.0.0</dependency>
+
     <strings>
         <intro>
             <![CDATA[
