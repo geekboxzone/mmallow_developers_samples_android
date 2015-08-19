@@ -19,7 +19,7 @@
     <group>Wearable</group>
     <package>com.example.android.xyztouristattractions</package>
     <minSdk>18</minSdk>
-    <compileSdkVersion>22</compileSdkVersion>
+    <targetSdkVersion>22</targetSdkVersion>
 
     <wearable>
         <has_handheld_app>true</has_handheld_app>

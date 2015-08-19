@@ -23,7 +23,7 @@
     <package>com.example.android.wearable.synchronizednotifications</package>
 
     <minSdk>18</minSdk>
-    <compileSdkVersion>22</compileSdkVersion>
+    <targetSdkVersion>22</targetSdkVersion>
 
     <wearable>
         <has_handheld_app>true</has_handheld_app>
