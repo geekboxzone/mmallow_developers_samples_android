@@ -32,7 +32,6 @@ import java.io.IOException;
  * Manages a Spinner for selecting a MidiInputPort.
  */
 public class MidiInputPortSelector extends MidiPortSelector {
-    private static final String TAG = "MidiInputPortSelector";
 
     private MidiInputPort mInputPort;
     private MidiDevice mOpenDevice;
@@ -44,27 +43,30 @@ public class MidiInputPortSelector extends MidiPortSelector {
      */
     public MidiInputPortSelector(MidiManager midiManager, Activity activity,
             int spinnerId) {
-        super(midiManager, activity, spinnerId, TYPE_INPUT);
+        super(midiManager, activity, spinnerId, MidiDeviceInfo.PortInfo.TYPE_INPUT);
     }
 
     @Override
     public void onPortSelected(final MidiPortWrapper wrapper) {
-        onClose();
-
+        close();
         final MidiDeviceInfo info = wrapper.getDeviceInfo();
         if (info != null) {
             mMidiManager.openDevice(info, new MidiManager.OnDeviceOpenedListener() {
                     @Override
                 public void onDeviceOpened(MidiDevice device) {
                     if (device == null) {
-                        Log.e(TAG, "could not open " + info);
+                        Log.e(MidiConstants.TAG, "could not open " + info);
                     } else {
                         mOpenDevice = device;
                         mInputPort = mOpenDevice.openInputPort(
                                 wrapper.getPortIndex());
+                        if (mInputPort == null) {
+                            Log.e(MidiConstants.TAG, "could not open input port on " + info);
+                        }
                     }
                 }
-            }, new Handler(Looper.getMainLooper()));
+            }, null);
+            // Don't run the callback on the UI thread because openInputPort might take a while.
         }
     }
 
@@ -76,6 +78,7 @@ public class MidiInputPortSelector extends MidiPortSelector {
     public void onClose() {
         try {
             if (mInputPort != null) {
+                Log.i(MidiConstants.TAG, "MidiInputPortSelector.onClose() - close port");
                 mInputPort.close();
             }
             mInputPort = null;
@@ -84,7 +87,7 @@ public class MidiInputPortSelector extends MidiPortSelector {
             }
             mOpenDevice = null;
         } catch (IOException e) {
-            Log.e(TAG, "cleanup failed", e);
+            Log.e(MidiConstants.TAG, "cleanup failed", e);
         }
     }
 }
